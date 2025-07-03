@@ -64,8 +64,6 @@
     <section class="banner-section mx-vh-100 position-relative">
         <div class="container-fluid mx-auto">
             <div class="row">
-                <div class="left-bg col-12 col-md-6 position-absolute top-0 ">
-                </div>
                 <div class="left-content col12 col-sm-9 col-md-6 d-flex justify-content-center">
                     <div class="title1">Find, Book <span> And Rent </span>
                         <br>
@@ -83,108 +81,143 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="right-content col-6 position-relative ">
-                    <div class="car-img position-absolute"><img src="./Assets/Car.png" alt="" class="img"></div>
-                </div>
-
-                <div class="mobile-banner ">
-                    <img src="./Assets/Car.png" alt="" class="img">
-                </div>
-
-
-            </div>
-            <div
-                class="bottom-content col-11  col-md-10 position-absolute mx-auto d-flex justify-content-between justify-content-lg-around ">
-                <div class="location">
-                    <div class="sub-head">Location</div>
-                    <div class="icon-content">
-                        <img src="./Assets/mdi_locations.png" alt="">
-                        <span>Choose a locations</span>
-                    </div>
-                </div>
-                <div class="pick-up">
-                    <div class="sub-head">Pick -Up Date</div>
-                    <div class="icon-content">
-                        <img src="./Assets/lets-icons_date-range-light.png" alt="">
-                        <span>Add a date & time</span>
-                    </div>
-                </div>
-                <div class="return">
-                    <div class="sub-head">Retrun</div>
-                    <div class="icon-content">
-                        <img src="./Assets/lets-icons_date-range-light.png" alt="">
-                        <span>Add a date & time</span>
-                    </div>
-                </div>
-                <div class="car-brand">
-                    <div class="sub-head">Car Brand</div>
-                    <div class="icon-content">
-                        <img src="./Assets/ph_car-fill.png" alt="">
-                        <span>Any</span>
-                    </div>
-                </div>
-                <div class="search">
-                    <a href="#">
-                        <button> <span>Search <i class="fa-solid fa-arrow-right"></i></span>
-                        </button>
-                    </a>
+                <div class="col-6 right-content">
+                    <div class="car-img"><img src="./Assets/Car.png" alt=" car image" class="img"></div>
                 </div>
             </div>
+
+
+
+
+        </div>
+        <div
+            class="bottom-content col-11  col-md-10 position-absolute mx-auto d-flex justify-content-between justify-content-lg-around ">
+            <div class="location">
+                <div class="sub-head">Location</div>
+                <div class="icon-content">
+                    <img src="./Assets/mdi_locations.png" alt="">
+                    <span>Choose a locations</span>
+                </div>
+            </div>
+            <div class="pick-up">
+                <div class="sub-head">Pick -Up Date</div>
+                <div class="icon-content">
+                    <img src="./Assets/lets-icons_date-range-light.png" alt="">
+                    <span>Add a date & time</span>
+                </div>
+            </div>
+            <div class="return">
+                <div class="sub-head">Retrun</div>
+                <div class="icon-content">
+                    <img src="./Assets/lets-icons_date-range-light.png" alt="">
+                    <span>Add a date & time</span>
+                </div>
+            </div>
+            <div class="car-brand">
+                <div class="sub-head">Car Brand</div>
+                <div class="icon-content">
+                    <img src="./Assets/ph_car-fill.png" alt="">
+                    <span>Any</span>
+                </div>
+            </div>
+            <div class="search">
+                <a href="#">
+                    <button> <span>Search <i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </a>
+            </div>
+        </div>
         </div>
     </section>
 
     <!-- Checkout Swiper section -->
-    <section class="checkout">
+    <section class="checkout ">
         <div class="container-fluid">
             <div class="title4 text-black text-center">Faster Checkout</div>
 
-            <section class="swiper-container checkout-swiper">
+            <section class="swiper-container checkout-swiper position-relative ">
                 <div class="swiper-wrapper">
                     <!-- Repeat this slide for each route/card -->
                     <div class="swiper-slide card">
-                        <img src="img1.jpg" alt="Route Image" class="card-img" />
-                        <div class="card-content">
-                            <h4>Kolkata → Bolpur</h4>
-                            <p>Mon, 20 Jan | 7:00 AM</p>
-                            <p class="price">Starting from ₹3000</p>
+                        <div class="card-content d-flex justify-content-between align-items-center w-100 mb-2">
+                            <div class="cart-img">
+                                <img src="./Assets/1024px-Upasana_Griha_-_North-western_View_-_Santiniketan_2014-06-29_5300.png"
+                                    alt="Route Image" class="img" />
+                            </div>
+                            <div class="cart-info mb-3">
+                                <div class="cart-top mb-1">Kolkata → Bolpur</div>
+                                <span>Mon, 20 Jan | 7:00 AM</span>
+                            </div>
+                            <hr>
+
+                        </div>
+                        <div class="cart-bottom d-flex justify-content-between align-items-center gap-5">
+                            <p class="price">Starting from <span>₹3000</span></p>
                             <button> <span>Book</span>
                             </button>
                         </div>
                     </div>
                     <div class="swiper-slide card">
-                        <img src="img1.jpg" alt="Route Image" class="card-img" />
-                        <div class="card-content">
-                            <h4>Kolkata → Bolpur</h4>
-                            <p>Mon, 20 Jan | 7:00 AM</p>
-                            <p class="price">Starting from ₹3000</p>
+                        <div class="card-content d-flex justify-content-between align-items-center w-100 mb-2">
+                            <div class="cart-img">
+                                <img src="./Assets/1024px-Upasana_Griha_-_North-western_View_-_Santiniketan_2014-06-29_5300.png"
+                                    alt="Route Image" class="img" />
+                            </div>
+                            <div class="cart-info mb-3">
+                                <div class="cart-top mb-1">Kolkata → Bolpur</div>
+                                <span>Mon, 20 Jan | 7:00 AM</span>
+                            </div>
+                            <hr>
+
+                        </div>
+                        <div class="cart-bottom d-flex justify-content-between align-items-center gap-5">
+                            <p class="price">Starting from <span>₹3000</span></p>
                             <button> <span>Book</span>
                             </button>
                         </div>
                     </div>
                     <div class="swiper-slide card">
-                        <img src="img1.jpg" alt="Route Image" class="card-img" />
-                        <div class="card-content">
-                            <h4>Kolkata → Bolpur</h4>
-                            <p>Mon, 20 Jan | 7:00 AM</p>
-                            <p class="price">Starting from ₹3000</p>
-                            <button> <span>Book</i></span>
+                        <div class="card-content d-flex justify-content-between align-items-center w-100 mb-2">
+                            <div class="cart-img">
+                                <img src="./Assets/1024px-Upasana_Griha_-_North-western_View_-_Santiniketan_2014-06-29_5300.png"
+                                    alt="Route Image" class="img" />
+                            </div>
+                            <div class="cart-info mb-3">
+                                <div class="cart-top mb-1">Kolkata → Bolpur</div>
+                                <span>Mon, 20 Jan | 7:00 AM</span>
+                            </div>
+                            <hr>
+
+                        </div>
+                        <div class="cart-bottom d-flex justify-content-between align-items-center gap-5">
+                            <p class="price">Starting from <span>₹3000</span></p>
+                            <button> <span>Book</span>
                             </button>
                         </div>
                     </div>
                     <div class="swiper-slide card">
-                        <img src="img1.jpg" alt="Route Image" class="card-img" />
-                        <div class="card-content">
-                            <h4>Kolkata → Bolpur</h4>
-                            <p>Mon, 20 Jan | 7:00 AM</p>
-                            <p class="price">Starting from ₹3000</p>
+                        <div class="card-content d-flex justify-content-between align-items-center w-100 mb-2">
+                            <div class="cart-img">
+                                <img src="./Assets/1024px-Upasana_Griha_-_North-western_View_-_Santiniketan_2014-06-29_5300.png"
+                                    alt="Route Image" class="img" />
+                            </div>
+                            <div class="cart-info mb-3">
+                                <div class="cart-top mb-1">Kolkata → Bolpur</div>
+                                <span>Mon, 20 Jan | 7:00 AM</span>
+                            </div>
+                            <hr>
+
+                        </div>
+                        <div class="cart-bottom d-flex justify-content-between align-items-center gap-5">
+                            <p class="price">Starting from <span>₹3000</span></p>
                             <button> <span>Book</span>
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- navigation arrows -->
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-prev">
+                </div>
                 <div class="swiper-button-next"></div>
             </section>
 
