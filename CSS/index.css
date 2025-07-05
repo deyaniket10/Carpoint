@@ -16,13 +16,11 @@ body {
   --btn--color: #ffae00;
   --font--color: #b0b0b0;
   --cart--color: #f3f6f8;
-}
-.container-fluid {
-  max-width: 1310px;
-  padding: 0 15px;
+  --bg--color: #f8f8f8;
+  --para-color: #8d8d8d;
 }
 .container {
-  max-width: 1110px;
+  max-width: 1310px;
   padding: 0 15px;
 }
 h1,
@@ -44,7 +42,7 @@ h3,
 h4,
 .title4 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
 }
 h5,
 .sub-head {
@@ -57,6 +55,12 @@ p,
   font-size: 19px;
   font-weight: 400;
   color: #fff;
+}
+p,
+.para {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--para-color);
 }
 
 a {
@@ -178,7 +182,7 @@ button:hover::before {
   left: 0;
   right: 0;
   bottom: -60px;
-  background-color: #f3f6f8;
+  background-color: var(--cart--color);
   /* background: url(../Assets/box-shadow.png) no-repeat center/cover; */
 }
 .bottom-content > div {
@@ -204,10 +208,14 @@ button:hover::before {
 
 .checkout-swiper {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1310px;
   margin: auto;
   padding: 15px 20px;
   position: relative;
+}
+.checkout-swiper .swiper-wrapper {
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .swiper-slide.card {
@@ -259,13 +267,13 @@ button:hover::before {
 
 /* .swiper-button-next{
 } */
-.swiper-button-next {
+.checkout-swiper .swiper-button-next {
   background: url(../Assets/arrow-right.png) no-repeat center/contain;
   height: 45px !important;
   width: 47px !important;
   right: -23px !important;
 }
-.swiper-button-prev {
+.checkout-swiper .swiper-button-prev {
   background: url(../Assets/aroow-left.png) no-repeat center/contain;
   height: 45px !important;
   width: 47px !important;
@@ -294,9 +302,6 @@ button:hover::before {
   font-weight: 600;
   color: var(--font--color);
 }
-.gap-5{
-  gap: 80px !important;
-}
 
 /* .card-content::after{
   content: " ";
@@ -306,6 +311,293 @@ button:hover::before {
   display: inline-block;
 } */
 
+/* Popular Section */
+.popular-swiper-section {
+  text-align: center;
+  padding: 50px 30px;
+  background: var(--bg--color);
+}
+.popular-swiper-section .para {
+  max-width: 474px;
+  margin: 15px auto;
+}
+
+.popular-swiper-section h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.popular-swiper-section .subtitle {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.popular-swiper {
+  width: 100%;
+}
+
+.logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide img {
+  width: 120px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.logo-slide img:hover {
+  opacity: 1;
+}
+.popular-swiper .swiper-wrapper {
+  align-items: center;
+}
+/* Root swiper container should also prevent overflow */
+.popular-swiper-section,
+.popular-swiper {
+  overflow-x: hidden;
+}
+
+/* If any inner container is causing overflow on X, restrict it */
+.popular-swiper-section > .swiper-container {
+  overflow-x: hidden;
+}
+
+/* Choose-cection */
+.choose-section .para {
+  max-width: 470px;
+}
+.right-img {
+  height: 428px;
+}
+.icon-call {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background: url(../Assets/bg-icon.png);
+}
+.support {
+  width: 350px;
+}
+/* Review */
+.review-section {
+  padding-bottom: 360px;
+}
+.review-section > .container > .para {
+  max-width: 850px;
+}
+
+.right-review .para {
+  max-width: 450px;
+  font-weight: 300;
+  font-size: 16px;
+}
+/* Testimonial swiper */
+.testimonial-section {
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.testimonial-swiper {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  /* padding: 20px 0; */
+}
+
+.testimonial-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.avatar-wrapper {
+  width: 150px;
+  height: 260px;
+  /* padding-inline: 20px; */
+  /* margin-bottom: 24px;
+   */
+  margin: auto;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-content {
+  max-width: 435px;
+  margin: 0 auto 10px;
+  background: #fff;
+  padding: 24px 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 7px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--font--color);
+  /* margin-bottom: 20px; */
+}
+
+.testimonial-name {
+  font-weight: 600;
+  color: black;
+}
+
+.testimonial-stars {
+  color: #ffb400;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+.testimonial-stars span {
+  display: block;
+}
+
+/* Navigation Arrows */
+.testimonial-swiper .swiper-button-next {
+  background: url(../Assets/ei_arrow-right.png) no-repeat center/contain;
+  height: 45px !important;
+  width: 47px !important;
+  right: 0 !important;
+}
+.testimonial-swiper .swiper-button-prev {
+  background: url(../Assets/ei_arrow-left.png) no-repeat center/contain;
+  height: 45px !important;
+  width: 47px !important;
+  left: 0 !important;
+}
+/* From Uiverse.io by Yaseen549 */
+.input {
+  color: black;
+  border: 2px solid #ffae00;
+  border-radius: 8px;
+  padding: 18px 10px;
+  background: transparent;
+  max-width: 388px;
+}
+
+.input:active {
+  box-shadow: 2px 2px 15px #ffae00 inset;
+}
+/* Count-section */
+.count-section {
+  padding-block: 54px;
+  background: var(--btn--color);
+}
+
+.counter-box h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  color: black;
+}
+
+.counter-box p {
+  font-size: 30px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+}
+/* Contact -section */
+
+.contact-container {
+  max-width: 896px;
+  margin: auto;
+  border-radius: 16px;
+  padding: 30px 15px 20px;
+
+  position: relative;
+  overflow: hidden;
+  box-shadow: -1px -3px 6px 2px gainsboro;
+  bottom: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left,
+.right {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.left form input,
+.left form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-height: 45px;
+}
+.left form textarea {
+  max-height: 94px !important;
+}
+
+.left form button {
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app-download p {
+  margin: 0;
+}
+
+.app-download p.sm-text {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.badges {
+  height: 120px;
+  width: 180px;
+}
+.badges a {
+  height: 100%;
+  width: 100%;
+}
+.black-img {
+  height: 60px;
+  width: 180px;
+  object-fit: contain;
+}
+.cars-bottom {
+  height: 138px;
+  max-width: 691px;
+  margin: auto;
+}
+.right .title4 {
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.footer-section {
+  padding: 300px 15px 15px;
+}
+@media screen and (max-width: 1200px) {
+  .checkout-swiper .swiper-wrapper {
+    gap: 0;
+  }
+}
 @media screen and (max-width: 992px) {
   .gap-65 {
     flex-grow: 1;
@@ -330,6 +622,9 @@ button:hover::before {
 @media screen and (max-width: 768px) {
   .title1 {
     font-size: 34px;
+  }
+  .col-6 {
+    width: 100%;
   }
   .navbar-toggler {
     background: #fff;
@@ -376,6 +671,30 @@ button:hover::before {
   .left-content > .sub-para {
     margin-block: 15px;
   }
+  .responsive {
+    margin: auto;
+    flex-wrap: no-wrap;
+  }
+  .choose-section > .container > .row {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .right-img {
+    max-height: 350px !important;
+    width: 70%;
+    margin: auto;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .cars-bottom {
+    position: relative;
+    bottom: 0;
+    transform: none;
+    justify-content: center;
+    margin-top: 24px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -393,7 +712,15 @@ button:hover::before {
   .bottom-content > div {
     width: 50%;
   }
+  .gap-5 {
+    gap: 30px !important;
+  }
   .checkout {
     padding-top: 150px;
+  }
+  .bottom-content > .search,
+  .bottom-content > .search > a,
+  .bottom-content > .search > a > button {
+    width: 100%;
   }
 }

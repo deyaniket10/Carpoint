@@ -12,3 +12,114 @@ const swiper = new Swiper(".checkout-swiper", {
     1024: { slidesPerView: 3 },
   },
 });
+
+// Autoplay Swiper
+const popularSwiper = new Swiper(".popular-swiper", {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2 },
+    640: { slidesPerView: 4 },
+    960: { slidesPerView: 6 },
+    1280: { slidesPerView: 7 },
+  },
+});
+// Testimonial Section
+const testimonialSwiper = new Swiper(".testimonial-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // speed: 800,
+  // autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false,
+  // },
+});
+
+// Count Section
+// const counter = document.querySelectorAll(".counter span");
+// const container = document.querySelectorAll(".number-content");
+// let activated = false;
+
+// window.addEventListener("scroll", () => {
+//   if (
+//     pageYOffset > container.offsetTop - container.offsetHeight - 200 &&
+//     activated === false
+//   ) {
+//     counter.forEach((counter) => {
+//       counter.innerText = 0;
+//       let count = 0;
+//       function updateCount() {
+//         const target = parseInt(counter.CDATA_SECTION_NODE.count);
+//         if (count < target) {
+//           count++;
+//           counter.innerText = count;
+//           setTimeout(updateCount, 10);
+//         } else {
+//           counter.innerText = target;
+//         }
+//       }
+//       updateCount();
+//       activated = true;
+//     });
+//   } else if (
+//     pageYOffset < container.offsetTop - container.offsetHeight - 500 ||
+//     (pageYOffset === 0 && activated === true)
+//   ) {
+//     counter.forEach((counter) => {
+//       counter.innerText = 0;
+//     });
+//     activated = false;
+//   }
+// });
+
+const SPEED = 200; // smaller = faster (affects step size)
+
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const counter = entry.target;
+      const targetK = +counter.dataset.target; // value in thousands (e.g., 15)
+
+      const update = () => {
+        // Extract numeric part (strip non‑digits) and default to 0
+        const displayedK = +counter.innerText.replace(/\D/g, "") || 0;
+        const step = Math.ceil(targetK / SPEED); // increment in thousands
+
+        if (displayedK < targetK) {
+          counter.innerText = displayedK + step + "+";
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = targetK + "+"; // lock final value
+          io.unobserve(counter); // stop watching
+        }
+      };
+
+      update();
+    });
+  },
+  { threshold: 0.15 } // start when ~15 % visible
+);
+
+// Observe every counter element on the page
+document.querySelectorAll(".counter").forEach((el) => io.observe(el));
+
+// Questions Form
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+    this.reset();
+  });
