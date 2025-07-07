@@ -67,6 +67,9 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+ul > li {
+  list-style-type: none;
+}
 .mx-vh-100 {
   min-height: 800px;
 }
@@ -509,7 +512,7 @@ button:hover::before {
 /* Contact -section */
 
 .contact-container {
-  max-width: 896px;
+  width: 896px;
   margin: auto;
   border-radius: 16px;
   padding: 30px 15px 20px;
@@ -522,8 +525,7 @@ button:hover::before {
   transform: translateX(-50%);
 }
 
-.left,
-.right {
+.left {
   flex: 1 1 300px;
   padding: 20px;
 }
@@ -555,16 +557,17 @@ button:hover::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: -25px;
 }
 
 .app-download p {
   margin: 0;
 }
 
-.app-download p.sm-text {
-  color: #555;
-  font-size: 0.9rem;
-  margin-bottom: 16px;
+.sm-text {
+  color: #ada9a9;
+  font-size: 1rem;
+  margin-bottom: 18px;
 }
 
 .badges {
@@ -589,9 +592,47 @@ button:hover::before {
   font-weight: 300;
   margin-bottom: 12px;
 }
-
+/* Footer Section */
 .footer-section {
   padding: 300px 15px 15px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-links > li a {
+  color: white;
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.subscribe #email {
+  padding: 11px 7px;
+  border-radius: 4px;
+}
+.subscribe a {
+  max-width: 94px;
+}
+.subscribe button {
+  max-width: 94px !important;
+  text-align: center;
+  padding: 5px 10px 10px;
+}
+.subscribe span {
+  font-size: 14px;
+  color: white;
+}
+.footer-icon > a {
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+}
+hr{
+  height: 4px;
+  background: var(--btn--color);
 }
 @media screen and (max-width: 1200px) {
   .checkout-swiper .swiper-wrapper {
@@ -604,6 +645,11 @@ button:hover::before {
     flex-basis: 100%;
     text-align: center;
     gap: 20px;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+  }
+  .nav-link {
+    color: white !important;
   }
   .nav-btn {
     flex-direction: column;
@@ -617,11 +663,26 @@ button:hover::before {
   .bottom-content > div {
     width: 33.33%;
   }
+  .contact-container {
+    width: 85%;
+  }
+  .subscribe #email {
+    max-width: 228px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .title1 {
     font-size: 34px;
+  }
+  .title2 {
+    font-size: 30px;
+  }
+  .title3 {
+    font-size: 28px;
+  }
+  .title4 {
+    font-size: 20px;
   }
   .col-6 {
     width: 100%;
@@ -637,17 +698,10 @@ button:hover::before {
     margin: auto;
   }
 
-  .gap-65 {
-    /* background: rgba(0,0,0,.5); */
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-  }
   .banner-btn {
     text-align: start;
   }
-  .nav-link {
-    color: white !important;
-  }
+
   .banner-section .col-6,
   .left-bg {
     width: 100%;
@@ -684,10 +738,20 @@ button:hover::before {
     width: 70%;
     margin: auto;
   }
+  /* Contatct */
   .contact-container {
     flex-direction: column;
   }
-
+  .right-review .title4 {
+    text-align: center;
+  }
+  .right-review .para,
+  .right-review .input {
+    margin: auto;
+  }
+  .right-review .input {
+    width: 100%;
+  }
   .cars-bottom {
     position: relative;
     bottom: 0;
@@ -695,9 +759,65 @@ button:hover::before {
     justify-content: center;
     margin-top: 24px;
   }
+  .contact-container {
+    width: 90%;
+    padding: 15px;
+    position: static !important;
+    transform: translateX(0);
+    margin-block: 15px;
+  }
+  .right {
+    text-align: center;
+  }
+  .badges {
+    margin: auto;
+  }
+  .contact-form button,
+  .left form button {
+    width: 100%;
+  }
+  .review-section {
+    padding-bottom: 30px;
+  }
+  .footer-section {
+    padding: 15px;
+  }
+  ul {
+    padding-left: 0;
+  }
+  .f-link{
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 575px) {
+  .mx-vh-100{
+    min-height: 676px ;
+  }
+  .title1 ,.counter-box h2{
+    font-size: 28px;
+  }
+  .title2 {
+    font-size: 24px;
+  }
+  .title3, .counter-box p {
+    font-size: 20px;
+  }
+  .title4  ,
+  .sub-para,
+  .sub-head {
+    font-size: 16px;
+  }
+  .para , .right-review .para{
+    font-size: 12px;
+    margin-bottom: 15px !important;
+  }
+  .testimonial-text{
+    font-size: 10px;
+  }
+  .icon-content span {
+    font-size: 12px;
+  }
   .logo-img {
     width: 140px;
   }
@@ -715,12 +835,43 @@ button:hover::before {
   .gap-5 {
     gap: 30px !important;
   }
+
   .checkout {
-    padding-top: 150px;
+    padding-top: 160px;
+    padding-bottom: 20px;
+  }
+  .popular-swiper-section{
+    padding: 15px 10px;
+  }
+  .count-section{
+    padding-block: 0;
   }
   .bottom-content > .search,
   .bottom-content > .search > a,
   .bottom-content > .search > a > button {
     width: 100%;
+  }
+  .footer-section > .container > .row > div {
+    margin-bottom: 10px;
+  }
+
+  .subscribe {
+    gap: 10px;
+  }
+  /* .subscribe #email,
+  .subscribe button {
+    margin: auto;
+  } */
+  .f-link {
+    width: 50% !important;
+  }
+  .footer-links {
+    gap: 10px;
+  }
+  .footer-links > li a {
+    font-size: 14px;
+  }
+  .footer-para {
+    font-size: 12px;
   }
 }
