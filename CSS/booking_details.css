@@ -1,0 +1,34 @@
+.container {
+    max-width: 1350px !important;
+    width: 100% !important;
+    margin: 0 auto;
+}
+
+.booking-section {
+    background: #f8f9fa;
+}
+
+.booking-section .card {
+    border: none;
+}
+
+.booking-section h5 {
+    font-weight: 600;
+}
+
+.booking-section .list-unstyled li {
+    margin-bottom: 8px;
+}
+
+#payBtn {
+    background: #007bff;
+}
+.card-body{
+    background-color: #EBF6FF ;
+}
+.hyundai{
+    max-width: 240px !important;
+}
+.payble{
+
+}

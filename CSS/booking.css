@@ -1,0 +1,276 @@
+/* Font Link */
+@import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: "Poppins";
+}
+
+.container {
+    max-width: 1310px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+:root {
+    --bg--color: #F9F9F9;
+    --btn--color: #FFAE00;
+    --cart--color: #F8F8F8;
+    --font--color: #299D00;
+    --sub-para--color: #90A3BF;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1,
+.title1 {
+    font-size: 48px;
+    color: black;
+}
+
+h4,
+.title4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p,
+.para {
+    font-size: 19px;
+}
+
+p,
+.sub-para {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sub-para--color);
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Header */
+.header-section {
+    background-color: var(--bg--color);
+}
+
+.nav-logo {
+    max-width: 296px;
+}
+
+.list-item {
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+.nav-list-item {
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+}
+
+.nav-collapse {
+    gap: 65px;
+}
+
+.bo-underline {
+    border-bottom: 2px solid var(--btn--color);
+}
+
+/* Banner-section */
+.banner-section {
+    background: url(../Assets/vistara_banner.png) no-repeat center/cover;
+    min-height: 450px;
+    padding-block: 40px 60px;
+}
+
+.title1 {
+    margin-bottom: 140px;
+}
+
+.title1 span {
+    color: var(--btn--color);
+    font-weight: 400;
+}
+
+.banner-section .para {
+    max-width: 433px;
+    color: #ffffff;
+}
+
+.bottom-content {
+    padding: 50px 15px;
+    border-radius: 22px;
+    box-shadow: 2px 5px 10px gray;
+    left: 0;
+    right: 0;
+    bottom: -70px;
+    background-color: var(--cart--color);
+    z-index: 5;
+    /* background: url(../Assets/box-shadow.png) no-repeat center/cover; */
+}
+
+.bottom-content>div {
+    width: 20%;
+}
+
+.mobile-banner {
+    display: none;
+}
+
+.icon-content>img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.icon-content span {
+    color: var(--font--color);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    /* font-family: inherit; */
+    /* font-size: inherit; */
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 19px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: black;
+    color: rgb(255, 255, 255);
+}
+
+button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+}
+
+button::before,
+button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+button::before {
+    content: "";
+    background: var(--btn--color);
+    width: 120%;
+    left: -10%;
+    transform: skew(15deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+/* Car-section */
+.car-section {
+    padding: 100px 50px;
+    /* background-color: #FFAE00; */
+}
+
+.cart-img {
+    max-width: 224px;
+    margin: 0 auto 20px;
+}
+
+.cart {
+    padding: 24px 24px 12px 10px;
+    background: var(--cart--color);
+    box-shadow: 2px 5px 10px gray;
+    border-radius: 10px;
+}
+
+.avl {
+    min-width: 85px;
+    padding: 7px 5px 7px 10px;
+    background: rgba(41, 157, 0, .1);
+    color: var(--font--color);
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.avl img {
+    width: 9px;
+    height: 9px;
+    object-fit: contain;
+
+}
+
+.content1 .pa,
+.content2 .pa {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content2 {
+    margin-block: 10px;
+}
+
+.pa img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.cart-price span {
+    font-size: 14px;
+    color: #d9d9d9;
+
+}
+
+@media screen and (max-width:1200px) {
+    .cart {
+        width: 48%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .cart {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width:575px) {
+    .cart {
+        width: 100%;
+    }
+
+}

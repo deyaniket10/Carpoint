@@ -15,11 +15,11 @@ const swiper = new Swiper(".checkout-swiper", {
 
 // Autoplay Swiper
 const popularSwiper = new Swiper(".popular-swiper", {
-  slidesPerView: 5,
+  slidesPerView: 6,
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 1000,
+    delay: 0,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -45,42 +45,6 @@ const testimonialSwiper = new Swiper(".testimonial-swiper", {
   // },
 });
 
-// Count Section
-// const counter = document.querySelectorAll(".counter span");
-// const container = document.querySelectorAll(".number-content");
-// let activated = false;
-
-// window.addEventListener("scroll", () => {
-//   if (
-//     pageYOffset > container.offsetTop - container.offsetHeight - 200 &&
-//     activated === false
-//   ) {
-//     counter.forEach((counter) => {
-//       counter.innerText = 0;
-//       let count = 0;
-//       function updateCount() {
-//         const target = parseInt(counter.CDATA_SECTION_NODE.count);
-//         if (count < target) {
-//           count++;
-//           counter.innerText = count;
-//           setTimeout(updateCount, 10);
-//         } else {
-//           counter.innerText = target;
-//         }
-//       }
-//       updateCount();
-//       activated = true;
-//     });
-//   } else if (
-//     pageYOffset < container.offsetTop - container.offsetHeight - 500 ||
-//     (pageYOffset === 0 && activated === true)
-//   ) {
-//     counter.forEach((counter) => {
-//       counter.innerText = 0;
-//     });
-//     activated = false;
-//   }
-// });
 
 const SPEED = 200; // smaller = faster (affects step size)
 
