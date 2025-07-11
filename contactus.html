@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Contact Us</title>
     <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -13,7 +13,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS Link -->
-    <link rel="stylesheet" href="./CSS/About.css">
+    <link rel="stylesheet" href="./CSS/contactus.css">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
     <header class="header-section position-absolute top-0 ">
         <nav class="navbar navbar-expand-lg  ">
             <div class="container">
-                <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png" class="logo-img"
-                        alt=""></a>
+                <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png"
+                        class="logo-img" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
 
                     </ul>
                     <div class="nav-btn d-flex justify-content-center align-items-center gap-lg-3">
-                        <a href="./sign_in.html" class="nav-link text-black">Log in</a>
+                        <a href="sign_in.html" class="nav-link text-black">Log in</a>
                         <a href="./sign_up.html">
                             <button> <span>Sign Up</span>
                             </button>
@@ -65,7 +65,7 @@
         <div class="container mx-auto">
             <div class="col-6 d-flex justify-content-center align-items-center banner-content">
                 <h1>
-                    ABOUT <br>
+                    CONTACT <br>
                     <span>US</span>
                 </h1>
             </div>
@@ -77,42 +77,69 @@
         </div>
 
     </section>
-    <!-- Welcome -->
-    <section class="welcome-section position-relative py-115">
-        <div class="container text-center">
-            <div class="title2 text-black">Welcome to Carpoint</div>
-            <div class="para mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
-        </div>
-    </section>
+
     <!-- About  -->
-    <section class="about-section position-relative">
+    <section class="form-section position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <div class="left-img w-100"><img
-                            src="./Assets/SUV-Rental-in-South-Africa-from-Pace-Car-Rental-1024x1024.png" class="img"
-                            alt=""></div>
+                    <div class="left-content">
+                        <div class="title3">Get in touch</div>
+                        <p class="mx-md-auto">Lorem ipsum dolor sit amet consectetur. Volutpat eu elit interdum in.
+                            Adipiscing urna diam
+                            pellentesque.</p>
+                        <div class=" touch">
+                            <div class="left-img">
+                                <img src="./Assets/mail.png" alt="" class="img">
+                            </div>
+                            <div>
+                                <div class="top-cont">Email address</div>
+                                <div class="bottom-cont fw-medium">info@carpoint.com</div>
+                            </div>
+                        </div>
+                        <div class="touch">
+                            <div class="left-img">
+                                <img src="./Assets/call.png" alt="" class="img">
+                            </div>
+                            <div>
+                                <div class="top-cont">Phone number</div>
+                                <div class="bottom-cont fw-medium">+91 12345 6789</div>
+                            </div>
+                        </div>
+                        <div class="touch">
+                            <div class="left-img">
+                                <img src="./Assets/location.png" alt="" class="img">
+                            </div>
+                            <div>
+                                <div class="top-cont">Address</div>
+                                <div class="bottom-cont fw-medium">7th Floor, Unit No- 7E, Bengal Eco Intelligent Park,
+                                    Plot
+                                    No. 3,
+                                    EM Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 d-flex flex-column  about-content gap-xl-5">
-                    <div class="title4">About Company</div>
-                    <div class="title3 my-2 my-lg-3">You start the engine
-                        and your adventure
-                        begins</div>
-                    <div class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure
-                        there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators
-                        on the Internet tend to repeat predefined chunks as necessary, making this the first true
-                        generator on the InternetThere are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected humour, or randomised words which
-                        don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need
-                        to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
-                        generators on the Internet tend to repeat predefined chunks as necessary, making this the first
-                        true generator on the Internet</div>
+                <div class="col-6">
+                    <div class="right-touch">
+                        <form id="right-form">
+                            <label for="fname">Full Name</label>
+                            <input type="text" name="fname" class="w-100 input" id="full-name"
+                                placeholder="Enter Full Name" required>
+                            <label for="BID">Booking ID</label>
+                            <input type="number" name="BID" class="w-100 input" id="bid" placeholder="Enter Booking ID">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" class="w-100 input" id="email"
+                                placeholder="Enter Email Address">
+                            <label for="des">Description</label>
+                            <textarea class="des w-100" placeholder="Type Here..." rows="4" required></textarea>
+                            <button class="submit"><span>Submit</span></button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
+
         </div>
 
         <!-- questions section -->
@@ -194,9 +221,7 @@
                     <div class="sub">Subscribe To Newsletters</div>
                     <input type="email" name="email" id="email" placeholder="Enter your email"
                         title="Enter your email address">
-                    <a href="#">
-                        <button> <span>Subscribe</span>
-                    </a>
+                    <button> <span>Subscribe</span>
                 </div>
             </div>
             <hr>

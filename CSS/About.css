@@ -557,6 +557,10 @@ hr {
     padding: 150px 15px 30px;
   }
 
+  .py-115 {
+    padding-block: 50px 30px;
+  }
+
   .about {
     font-size: 60px;
   }
@@ -571,7 +575,5 @@ hr {
     margin-left: 50px;
   }
 
-  .all-car {
-    /* bottom: -120px; */
-  }
+
 }

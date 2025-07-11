@@ -26,19 +26,22 @@
                         <img src="./Assets/Carpoint-blacklogo.png" alt="">
                     </a>
                 </div>
-                <div class="nav-collapse d-flex align-items-center">
+                <div class="nav-collapse align-items-center">
                     <nav class="nav-item">
                         <ul class="list-item d-flex justify-content-between align-items-center  ">
                             <li><a class="nav-list-item" href="./About.html">About</a></li>
                             <li><a class="nav-list-item bo-underline" href="./booking.html">Booking</a></li>
                             <li><a class="nav-list-item" href="./how_it_works.html">How its Work</a></li>
-                            <li><a class="nav-list-item" href="#">Contact</a></li>
+                            <li><a class="nav-list-item" href="./contactus.html">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="nav-btn d-flex justify-content-center align-items-center gap-3 ">
-                        <a href="./sign_in.html" class="text-black fw-medium fs-5">Log in</a>
+                        <a href="./sign_in.html" class="fw-medium fs-5 nav-list-item">Log in</a>
                         <a href="./sign_up.html"><button><span>Sign up</span></button></a>
                     </div>
+                </div>
+                <div class="ham">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
@@ -64,21 +67,21 @@
                     <div class="sub-head">Location</div>
                     <div class="icon-content">
                         <img src="./Assets/mdi_locations.png" alt="">
-                        <span>Choose a locations</span>
+                        <span>Deshapriya Park, Kolkata</span>
                     </div>
                 </div>
                 <div class="pick-up">
                     <div class="sub-head">Pick -Up Date</div>
                     <div class="icon-content">
                         <img src="./Assets/lets-icons_date-range-light.png" alt="">
-                        <span>Add a date & time</span>
+                        <span>14 SEP'24,15:00 Mon</span>
                     </div>
                 </div>
                 <div class="return">
                     <div class="sub-head">Retrun</div>
                     <div class="icon-content">
                         <img src="./Assets/lets-icons_date-range-light.png" alt="">
-                        <span>Add a date & time</span>
+                        <span>18SEP'24,16:00 Fri</span>
                     </div>
                 </div>
                 <div class="car-brand">
@@ -100,104 +103,491 @@
 
 
     <!-- car-section -->
-    <section class="car-section">
+    <section class="car-section position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-2"></div>
+                <!-- Left boxces -->
+                <div class="col-2">
+                    <div class="filter-box position-relative">
+                        <div class="filter-header d-flex justify-content-between align-items-center">
+                            <h5 class="fw-medium fs-6">Filter</h5>
+                            <button class="clear-btn" onclick="clearAll()">Clear All</button>
+                        </div>
+
+                        <!-- Kilometers -->
+                        <div class="section-title">Kilometers Plan</div>
+                        <div class="d-flex justify-content-between mb-3 me-2 gap-2">
+                            <div class="form-check yellow-btn ">
+                                <input class="form-check-input" type="checkbox" id="km140">
+                                <label class="form-check-label" for="km140">140 Kms</label>
+                            </div>
+                            <div class="form-check bf">
+                                <input class="form-check-input" type="checkbox" id="km280">
+                                <label class="form-check-label" for="km280">280 Kms</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center gap-2 me-2">
+                            <div class="form-check bf">
+                                <input class="form-check-input" type="checkbox" id="km340">
+                                <label class="form-check-label" for="km340">340 Kms</label>
+                            </div>
+                            <div class="form-check bf">
+                                <input class="form-check-input" type="checkbox" id="km480">
+                                <label class="form-check-label" for="km480">480 Kms</label>
+                            </div>
+                        </div>
+
+                        <!-- Segment -->
+                        <div class="section-title">Segment</div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="sedan">
+                            <label class="form-check-label" for="sedan">Sedan</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="suv">
+                            <label class="form-check-label" for="suv">SUV</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="hatchback">
+                            <label class="form-check-label" for="hatchback">Hatch Back</label>
+                        </div>
+                        <hr>
+
+                        <!-- Brand -->
+                        <div class="section-title">Brand</div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="mahindra">
+                            <label class="form-check-label" for="mahindra">Mahindra</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="tata">
+                            <label class="form-check-label" for="tata">TATA</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="hyundai">
+                            <label class="form-check-label" for="hyundai">Hyundai</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="honda">
+                            <label class="form-check-label" for="honda">Honda</label>
+                        </div>
+                        <hr>
+                        <!-- Capacity -->
+                        <div class="section-title">Capacity</div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="2person">
+                            <label class="form-check-label" for="2person">2 Person</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="4person">
+                            <label class="form-check-label" for="4person">4 Person</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="form-check-input" type="checkbox" id="6person">
+                            <label class="form-check-label" for="6person">6 Person</label>
+                        </div>
+                        <hr>
+                        <!-- Price -->
+                        <div class="section-title">Price</div>
+                        <input type="range" class="form-range" min="1000" max="10000" id="priceRange"
+                            oninput="updatePrice(this.value)">
+                        <div class="range-output" id="priceOutput">₹1000</div>
+                    </div>
+                </div>
                 <div class="col-10">
-                    <div class="sub-para">35 Car available for rent in Deshapriya Park Kolkata </div>
+                    <div class="card-top d-flex justify-content-between align-items-center gap-2 mb-4">
+                        <div class="sub-para text-black fw-medium ">35 Car available for rent in Deshapriya Park
+                            Kolkata
+                        </div>
+                        <div class="sort fw-medium ">
+                            Sort by <img src="./Assets/sort.png" alt="">
+                        </div>
+                    </div>
                     <!-- 1st row  -->
-                    <div class="row gap-3 gap-xl-4 flex-xl-nowrap justify-content-between" >
-                        <div class=" col-xl-4 cart">
-                            <div class="card-top">
-                                <div class="card-head d-flex justify-content-between">
-                                    <div class="title4 ">Hyundai SUV</div>
-                                    <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                    <div class="row justify-content-between" id="card-cars">
+                        <div class="col-12 col-sm-6  col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
-                                <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
-                            </div>
-                            <div class="cart-img">
-                                <img src="./Assets/Huyndai_suv.png" class="img" alt="">
-                            </div>
-                            <div class="cart-content">
-                                <div class="content1 d-flex justify-content-between">
-                                    <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
-                                    <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
-                                    <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
                                 </div>
-                                <div class="content2 d-flex justify-content-between ">
-                                    <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
-                                    <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
                                 </div>
-                                <hr>
-                            </div>
-                            <div class="cart-price d-flex justify-content-between align-items-center">
-                                <div class="title4"> 4800/ <span>Day</span></div>
-                                <a href="#"><button><span>Book Now</span></button></a>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
                             </div>
                         </div>
-                        <div class=" col-xl-4 cart">
-                            <div class="card-top">
-                                <div class="card-head d-flex justify-content-between">
-                                    <div class="title4 ">Hyundai SUV</div>
-                                    <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
-                                <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
-                            </div>
-                            <div class="cart-img">
-                                <img src="./Assets/Huyndai_suv.png" class="img" alt="">
-                            </div>
-                            <div class="cart-content">
-                                <div class="content1 d-flex justify-content-between">
-                                    <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
-                                    <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
-                                    <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
                                 </div>
-                                <div class="content2 d-flex justify-content-between ">
-                                    <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
-                                    <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
                                 </div>
-                                <hr>
-                            </div>
-                            <div class="cart-price d-flex justify-content-between align-items-center">
-                                <div class="title4"> 4800/ <span>Day</span></div>
-                                <a href="#"><button><span>Book Now</span></button></a>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
                             </div>
                         </div>
-                        <div class=" col-xl-4 cart">
-                            <div class="card-top">
-                                <div class="card-head d-flex justify-content-between">
-                                    <div class="title4 ">Hyundai SUV</div>
-                                    <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
-                                <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
-                            </div>
-                            <div class="cart-img">
-                                <img src="./Assets/Huyndai_suv.png" class="img" alt="">
-                            </div>
-                            <div class="cart-content">
-                                <div class="content1 d-flex justify-content-between">
-                                    <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
-                                    <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
-                                    <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
                                 </div>
-                                <div class="content2 d-flex justify-content-between ">
-                                    <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
-                                    <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
                                 </div>
-                                <hr>
-                            </div>
-                            <div class="cart-price d-flex justify-content-between align-items-center">
-                                <div class="title4"> 4800/ <span>Day</span></div>
-                                <a href="#"><button><span>Book Now</span></button></a>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
+                                </div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
+                                </div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
+                                </div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
+                                </div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
+                                </div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
+                                </div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
+                                </div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
+                                </div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
+                                </div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
+                                </div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="cart">
+                                <div class="card-top">
+                                    <div class="card-head d-flex justify-content-between">
+                                        <div class="title4 ">Hyundai SUV</div>
+                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                    </div>
+                                    <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
+                                </div>
+                                <div class="cart-img">
+                                    <img src="./Assets/Huyndai_suv.png" class="img" alt="">
+                                </div>
+                                <div class="cart-content">
+                                    <div class="content1 d-flex justify-content-between">
+                                        <div class="pa"><img src="./Assets/gas-station.png" alt="">Diesel</div>
+                                        <div class="pa"><img src="./Assets/Automatic.png" alt="">Automatic</div>
+                                        <div class="pa"><img src="./Assets/profile-user.png" alt="">7People</div>
+                                    </div>
+                                    <div class="content2 d-flex justify-content-between ">
+                                        <div class="pa"><img src="./Assets/Insu.png" alt="">Insurance Included</div>
+                                        <div class="pa"><img src="./Assets/speed.png" alt="">250 Km/Day</div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="cart-price d-flex justify-content-between align-items-center">
+                                    <div class="title4"> 4800/ <span>Day</span></div>
+                                    <a href="#"><button><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <!-- 2nd row -->
                 </div>
             </div>
+            <!-- anchor linking -->
+            <div class="card-row">
+                <ul class="card-list d-flex mx-auto">
+                    <li><a href=""><img src="./Assets/black_arrow-left.png" alt=""></a></li>
+                    <li class="p-1"><a href="./booking.html">1</a></li>
+                    <li class="p-1"><a href="#card-cars">2</a></li>
+                    <li class="p-1"><a href="#card-cars">...</a></li>
+                    <li class="p-1"><a href="#card-cars">9</a></li>
+                    <li class="p-1"><a href="#card-cars">10</a></li>
+                    <li><a href=""><img src="./Assets/right-arrow.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- questions section -->
+        <div class="contact-container position-absolute bg-white">
+            <div class="title2 text-center">Questions? Get in Touch</div>
+            <div class="row justify-content-between align-items-center">
+                <div class="left col-6">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Your Name*" required />
+                        <input type="email" placeholder="Your Email*" required />
+                        <textarea placeholder="Your Message*" rows="4" required></textarea>
+                        <button> <span>Explore now</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="right col-6">
+                    <div class="title4">Download <a href="#"><img src="./Assets/Carpoint-blacklogo.png"
+                                class="black-img" alt=""></a> <br>
+                        App for free</div>
+                    <p class="sm-text">For easier booking & easy deals</p>
+                    <div class="badges">
+                        <a href="#"><img src="./Assets/Google_play-logo.png" class="img" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cars-bottom">
+                <img src="./Assets/all-car.png" class="img" alt="">
+            </div>
         </div>
     </section>
+
+    <!-- Footer-section -->
+    <div class="section footer-section bg-black ">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-12 col-sm-6  col-lg-5">
+                    <div class="footer-logo"><a href="#"><img src="./Assets/CarPoint-White-Logo-1.png" alt=""></a></div>
+                    <div class="footer-para my-2 my-md-3 fw-light">Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text</div>
+                    <div class="footer-icon mb-2 mb-md-3">
+                        <a href="#">
+                            <img src="./Assets/ic_baseline-facebook.png" class="img" alt="icon">
+                        </a>
+                        <a href="#">
+                            <img src="./Assets/mdi_instagram.png" class="img" alt="icon">
+                        </a>
+                        <a href="#">
+                            <img src="./Assets/prime_twitter.png" class="img" alt="icon">
+                        </a>
+                        <a href="#">
+                            <img src="./Assets/mdi_youtube.png" class="img" alt="icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3 res subscribe d-none">
+                    <div class="sub mb-2 mb-md-3">Subscribe To Newsletters</div>
+                    <form action="/" class="form-footer">
+                        <input type="email" name="email" id="footer-email" placeholder="Enter your email"
+                            title="Enter your email address">
+                        <button> <span>Subscribe</span> </button>
+                    </form>
+                </div>
+                <div class=" col-6  col-lg-2 f-link ">
+                    <ul class="footer-links">
+                        <li><a href="#"><b>Company</b></a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#"> Booking</a></li>
+                        <li><a href="#">How its Work </a></li>
+                    </ul>
+                </div>
+                <div class=" col-6  col-lg-2 f-link">
+                    <ul class="footer-links">
+                        <li><a href="#"><b>Help</b></a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6  col-lg-3 subscribe">
+                    <div class="sub">Subscribe To Newsletters</div>
+                    <form action="/">
+                        <input type="email" name="email" id="email" placeholder="Enter your email"
+                            title="Enter your email address">
+                        <button> <span>Subscribe</span> </button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="end d-flex justify-content-center align-items-center text-white"><img
+                    src="./Assets/mdi_copyright.png" class="end-img me-2" alt="">2024 CarPoint All rights reserved.
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
