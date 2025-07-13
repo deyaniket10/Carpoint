@@ -1,3 +1,5 @@
+AOS.init();
+
 // Header Section
 const menu = document.querySelector(".ham")
 console.log(menu)
@@ -20,3 +22,34 @@ function clearAll() {
     document.getElementById('priceRange').value = 1000;
     updatePrice(1000);
 }
+
+// for mobile 
+
+
+const mobile = document.querySelector(".mobile")
+console.log(mobile)
+const items = document.querySelector(".mobile-items")
+console.log(items)
+mobile.addEventListener("click", () => {
+    console.log("event triggered");
+    items.classList.toggle("active");
+})
+
+// const openBtn = document.getElementById('openFilterBtn');
+// const closeBtn = document.getElementById('closeFilterBtn');
+// const filterModal = document.getElementById('filterModal');
+
+// openBtn.addEventListener('click', () => {
+//     filterModal.style.display = 'block';
+// });
+
+// closeBtn.addEventListener('click', () => {
+//     filterModal.style.display = 'none';
+// });
+
+// // Optional: Close modal when clicking outside
+// window.addEventListener('click', (e) => {
+//     if (e.target === filterModal) {
+//         filterModal.style.display = 'none';
+//     }
+// });

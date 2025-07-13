@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./CSS/how-its-work.css">
     <!-- Swiper cdn -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Aos CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -63,14 +65,15 @@
     <!-- Banner Section -->
     <section class="banner-section mx-vh-100 position-relative">
         <div class="container mx-auto">
-            <div class="title ">
+            <div class="title " data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 HOW ITS <span>WORK</span>
             </div>
         </div>
-        <div class="banner-img position-absolute ">
+        <div class="banner-img position-absolute" data-aos="fade-up-right">
             <img src="./Assets/banner_car-how-its-work.png" alt="">
         </div>
-        <div class="dp position-absolute bottom-0">
+        <div class="dp position-absolute bottom-0" data-aos="fade-left" data-aos-anchor="#example-anchor"
+            data-aos-offset="500" data-aos-duration="500">
             <img src="./Assets/dp-how-its-work.png" alt="">
         </div>
     </section>
@@ -132,7 +135,8 @@
             <div class="para mx-auto text-center mb-3">We present popular cars that are rented by customers to maximize
                 your comfort on long trips</div>
             <div class="row ">
-                <div class="col-6 px-2  d-flex flex-column justify-content-between">
+                <div class="col-6 px-2  d-flex flex-column justify-content-between" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <div class="row gap-2 gap-md-3 responsive flex-nowrap  px-1 px-md-2">
                         <div class="icon-call">
                             <img src="./Assets/calling-icon.png" class="img" alt="">
@@ -165,7 +169,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="right-img w-100 ">
+                    <div class="right-img w-100 " data-aos="flip-left">
                         <img src="./Assets/right-img.png" alt="" class="img">
                     </div>
                 </div>
@@ -182,7 +186,8 @@
                 dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</div>
             <div class="row">
                 <div class="col-6">
-                    <div class="testimonial-section">
+                    <div class="testimonial-section" data-aos="fade-right" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                         <div class="swiper-container testimonial-swiper">
                             <div class="swiper-wrapper">
                                 <!-- Slide 1 -->
@@ -232,7 +237,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 ">
+                <div class="col-6 " data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="500">
                     <div class="right-review h-100 w-100 d-flex flex-column justify-content-between">
                         <div class="title4 mb-4">What Our Customer’s Says
                             About us?</div>
@@ -381,6 +387,8 @@
         </div>
     </div>
 
+    <!-- AOS Js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- swiper Js cdn -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -390,7 +398,7 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <script src="./JS/index.js"></script>
+    <script src="./JS/how-it-works.js"></script>
 </body>
 
 </html>

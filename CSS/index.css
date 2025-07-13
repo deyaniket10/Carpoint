@@ -10,7 +10,7 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: "popins", sans-serif;
+  font-family: "poppins", sans-serif;
 }
 
 :root {
@@ -107,11 +107,13 @@ ul>li {
 .gap-65 {
   flex-grow: 0;
   flex-basis: auto;
-  gap: 30px;
+  gap: 20px;
 }
 
 .nav-link {
   font-size: 19px;
+  font-weight: 500;
+  padding-right: 0 !important;
 }
 
 .ham::before {
@@ -257,7 +259,7 @@ button:hover::before {
 
 .checkout-swiper .swiper-wrapper {
   justify-content: space-between;
-  gap: 60px;
+  gap: 80px;
 }
 
 .swiper-slide.card {
@@ -537,7 +539,6 @@ button:hover::before {
   left: 0 !important;
 }
 
-/* From Uiverse.io by Yaseen549 */
 .input {
   color: black;
   border: 2px solid #ffae00;
