@@ -169,7 +169,7 @@ button:hover::before {
 }
 
 .nav-link:hover {
-  color: var(--btn--color)!important;
+  color: var(--btn--color) !important;
   content: " ";
   border-bottom: 1px solid var(--btn--color);
 }
@@ -579,13 +579,13 @@ button:hover::before {
   margin: auto;
   border-radius: 16px;
   padding: 30px 15px 20px;
-
   position: relative;
   overflow: hidden;
   box-shadow: -1px -3px 6px 2px gainsboro;
   bottom: -250px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .left {
@@ -833,7 +833,9 @@ hr {
   .bottom-content {
     bottom: -120px;
   }
-
+.banner-section{
+  padding-bottom: 150px;
+}
   .bottom-content>div {
     width: 33.33%;
   }
@@ -939,6 +941,9 @@ hr {
   .mx-vh-100 {
     min-height: 676px;
   }
+  .banner-section{
+    padding-bottom: 80px;
+  }
 
   .title1,
   .counter-box h2 {
@@ -1009,6 +1014,19 @@ hr {
     height: 40px;
   }
 
+  /* Cart-testimonial */
+  .cart-info .cart-top {
+    font-size: 14px;
+  }
+
+  .cart-bottom .price,
+  .cart-info span {
+    font-size: 12px;
+  }
+  .swiper-slide.card{
+    padding: 15px 10px;
+  }
+
   .checkout {
     padding-top: 160px;
     padding-bottom: 20px;
@@ -1055,4 +1073,5 @@ hr {
   .footer-para {
     font-size: 12px;
   }
+
 }
