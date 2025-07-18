@@ -17,22 +17,6 @@ const swiper = new Swiper(".checkout-swiper", {
   },
 });
 
-// Autoplay Swiper
-const popularSwiper = new Swiper(".popular-swiper", {
-  slidesPerView: 6,
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    320: { slidesPerView: 2 },
-    640: { slidesPerView: 4 },
-    960: { slidesPerView: 6 },
-    1280: { slidesPerView: 7 },
-  },
-});
 // Testimonial Section
 const testimonialSwiper = new Swiper(".testimonial-swiper", {
   slidesPerView: 1,
