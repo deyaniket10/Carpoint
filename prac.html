@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Location Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .search-form {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group i {
+            color: #888;
+            font-size: 18px;
+        }
+
+        .input-group input {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 10px;
+            width: 250px;
+        }
+
+        .search-btn {
+            background: #ffb000;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #ff9800;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="search-form" onsubmit="handleSearch(event)">
+        <div class="input-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <img src="./Assets/location.png" alt="">
+            <input type="text" id="location" name="location" placeholder="Deshapriya Park, Kolkata" required />
+        </div>
+        <button type="submit" class="search-btn">
+            Search <i class="fas fa-arrow-right"></i>
+        </button>
+    </form>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function handleSearch(e) {
+            e.preventDefault();
+            const location = document.getElementById('location').value;
+            alert("Searching cars in: " + location);
+            // In real project, you can redirect or send API call here.
+        }
+    </script>
+
+</body>
+
+</html>

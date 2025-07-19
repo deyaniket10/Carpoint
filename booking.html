@@ -64,35 +64,58 @@
                     iOS AND Android device
                 </div>
             </div>
-            <div
+            <form action=""
                 class="bottom-content text-center col-11  col-md-10 position-absolute mx-auto d-flex justify-content-between justify-content-lg-around ">
                 <div class="location">
-                    <div class="sub-head">Location</div>
-                    <div class="icon-content">
+                    <label for="location" class="sub-head">Location</label>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="./Assets/mdi_locations.png" class="form-img" alt=""><input type="text" name="location"
+                            id="loc" class="icon-content" required placeholder="Deshapriya Park, Kolkata">
+
+                    </div> <!-- <div class="sub-head">Location</div> -->
+                    <!-- <div class="icon-content">
                         <img src="./Assets/mdi_locations.png" alt="">
-                        <span>Deshapriya Park, Kolkata</span>
-                    </div>
+                        <span></span>
+                    </div> -->
                 </div>
                 <div class="pick-up">
-                    <div class="sub-head">Pick -Up Date</div>
+                    <label for="time" class="sub-head">Pick -Up Date</label>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="./Assets/lets-icons_date-range-light.png" class="form-img" alt="">
+                        <input type="datetime" name="time" id="time" class="icon-content" required
+                            placeholder="14 SEP'24,15:00 Mon">
+                    </div>
+                    <!-- <div class="sub-head">Pick -Up Date</div>
                     <div class="icon-content">
                         <img src="./Assets/lets-icons_date-range-light.png" alt="">
                         <span>14 SEP'24,15:00 Mon</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="return">
-                    <div class="sub-head">Retrun</div>
+                    <label for="time" class="sub-head">Return</label>
+                    <div class="d-flex justify-content-start align-items-center">
+                    <img src="./Assets/lets-icons_date-range-light.png" class="form-img" alt="">
+                        <input type="datetime" name="time" id="return" required class="icon-content"
+                            placeholder="18SEP'24,16:00 Fri">
+                    </div>
+                    <!-- <div class="sub-head">Retrun</div>
                     <div class="icon-content">
                         <img src="./Assets/lets-icons_date-range-light.png" alt="">
                         <span>18SEP'24,16:00 Fri</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="car-brand">
-                    <div class="sub-head">Car Brand</div>
+                    <label for="any" class="sub-head">Any</label>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="./Assets/ph_car-fill.png" class="form-img" alt="">
+                        <input type="datetime" name="any" id="any" class="icon-content" required placeholder="Any">
+                    </div>
+
+                    <!-- <div class="sub-head">Car Brand</div>
                     <div class="icon-content">
                         <img src="./Assets/ph_car-fill.png" alt="">
                         <span>Any</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="search">
                     <a href="#">
@@ -100,7 +123,7 @@
                         </button>
                     </a>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
@@ -456,7 +479,7 @@
                             <div class="cart">
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
-                                        <div class="title4 ">Nissan  Datsun GO+</div>
+                                        <div class="title4 ">Nissan Datsun GO+</div>
                                         <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
@@ -574,7 +597,6 @@
                         </div>
 
                     </div>
-                    <!-- 2nd row -->
                 </div>
             </div>
 
@@ -623,7 +645,7 @@
     </section>
 
     <!-- Footer-section -->
-    <div class="section footer-section bg-black " data-aos="zoom-in-up" >
+    <div class="section footer-section bg-black " data-aos="zoom-in-up">
         <div class="container">
             <div class="row text-light">
                 <div class="col-12 col-sm-6  col-lg-5">

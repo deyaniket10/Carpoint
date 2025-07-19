@@ -29,9 +29,7 @@
             <div class="container">
                 <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png"
                         class="logo-img" alt=""></a>
-                <button class="navbar-toggler ham" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse gap-65" id="navbarSupportedContent">
@@ -61,6 +59,24 @@
                 </div>
             </div>
         </nav>
+        <!-- Offcanvas for Mobile -->
+        <div class="offcanvas offcanvas-start bg-black" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png"
+                        class="logo-img" alt=""></a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="./About.html" class="nav-link">About</a>
+                <a href="./booking.html" class="nav-link">Booking</a>
+                <a href="./how_it_works.html" class="nav-link">How It Work</a>
+                <a href="./contactus.html" class="nav-link">Contact</a>
+                <a href="./sign_in.html" class="nav-link">Login</a>
+                <a href="./sign_up.html">
+                    <button><span>Sign up</span></button>
+                </a>
+            </div>
+        </div>
     </header>
     <!-- Banner Section -->
     <section class="banner-section mx-vh-100 position-relative">
@@ -322,7 +338,7 @@
 
 
     <!-- Footer-section -->
-    <div class="section footer-section bg-black "  data-aos="zoom-in-up" >
+    <div class="section footer-section bg-black " data-aos="zoom-in-up">
         <div class="container">
             <div class="row text-light">
                 <div class="col-12 col-sm-6  col-lg-5">

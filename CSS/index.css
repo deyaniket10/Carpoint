@@ -176,6 +176,39 @@ button:hover::before {
   border-bottom: 1px solid var(--btn--color);
 }
 
+/* Offcanvas */
+.offcanvas {
+  display: none;
+}
+
+.offcanvas-body a {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+.offcanvas-body a:hover {
+  /* color: #ffae00; */
+}
+
+.offcanvas-body button {
+  width: 100%;
+}
+
+.offcanvas-header button::before {
+  display: none;
+}
+
+.offcanvas-header button {
+  background: url(../Assets/x-white.jpg)no-repeat center/contain;
+  height: 25px;
+  width: 25px;
+}
+
+
+
 /* banner-section */
 .banner-section {
   background: url(../Assets/Banner-bg.png) no-repeat center/cover;
@@ -457,7 +490,8 @@ button:hover::before {
 /* If any inner container is causing overflow on X, restrict it */
 /* .popular-swiper-section>.swiper-container {
   overflow-x: hidden;
-} */ */
+} */
+*/
 
 /* Choose-cection */
 .choose-section .para {
@@ -776,8 +810,13 @@ hr {
     backdrop-filter: blur(50px);
   }
 
+  .offcanvas {
+    display: block;
+  }
+
   .nav-link {
     color: white !important;
+    text-shadow: 0 0 black;
   }
 
   .nav-btn {
