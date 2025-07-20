@@ -399,7 +399,7 @@ button:hover::before {
     margin: auto;
     border-radius: 16px;
     padding: 30px 15px 20px;
-
+    z-index: 5;
     position: relative;
     overflow: hidden;
     box-shadow: -1px -3px 6px 2px gainsboro;
@@ -692,136 +692,135 @@ hr {
     .payble>.row>div:last-child,
     .dp-para,
     .sep>.col-6,
-    .card-body h6,
-    {
-    font-size: 14px;
-}
+    .card-body h6 {
+        font-size: 14px;
+    }
 
-.payble>div>div:first-child,
-.drop-bottom {
-    font-size: 12px !important;
-}
+    .payble>div>div:first-child,
+    .drop-bottom {
+        font-size: 12px !important;
+    }
 
-.booking-section h5 {
-    text-align: center;
-}
+    .booking-section h5 {
+        text-align: center;
+    }
 
-.t-5,
-.txt-cont {
-    font-size: 12px;
-    margin-block: 10px !important;
-}
+    .t-5,
+    .txt-cont {
+        font-size: 12px;
+        margin-block: 10px !important;
+    }
 
-.sub-para {
-    font-size: 10px;
-    margin-bottom: 10px !important;
-}
+    .sub-para {
+        font-size: 10px;
+        margin-bottom: 10px !important;
+    }
 
-.dp-img {
-    margin: auto;
-}
+    .dp-img {
+        margin: auto;
+    }
 
-.dp-btn {
-    flex-direction: column;
-}
+    .dp-btn {
+        flex-direction: column;
+    }
 
-.content1 .pa,
-.content2 .pa {
-    font-size: 10px;
-}
+    .content1 .pa,
+    .content2 .pa {
+        font-size: 10px;
+    }
 
-.cart-content {
-    margin-bottom: 20px;
-}
+    .cart-content {
+        margin-bottom: 20px;
+    }
 
-.park p+p {
-    font-size: 6px;
-}
+    .park p+p {
+        font-size: 6px;
+    }
 
-.dp-para {
-    font-size: 12px;
-    margin-top: 15px;
-}
+    .dp-para {
+        font-size: 12px;
+        margin-top: 15px;
+    }
 
-.drop-top {
-    font-size: 15px;
-}
+    .drop-top {
+        font-size: 15px;
+    }
 
-.support-section {
-    padding: 30px 0;
-}
+    .support-section {
+        padding: 30px 0;
+    }
 
-.logo-img {
-    width: 140px;
-}
+    .logo-img {
+        width: 140px;
+    }
 
-.mobile-banner {
-    width: 90%;
-    padding-bottom: 0;
-}
+    .mobile-banner {
+        width: 90%;
+        padding-bottom: 0;
+    }
 
-.bottom-content {
-    bottom: -140px;
-    padding: 20px 15px;
-}
+    .bottom-content {
+        bottom: -140px;
+        padding: 20px 15px;
+    }
 
-.bottom-content>div {
-    width: 50%;
-}
+    .bottom-content>div {
+        width: 50%;
+    }
 
-.gap-5 {
-    gap: 30px !important;
-}
+    .gap-5 {
+        gap: 30px !important;
+    }
 
-.support {
-    max-width: 275px;
-}
+    .support {
+        max-width: 275px;
+    }
 
-.icon-call {
-    width: 40px;
-    height: 40px;
-}
+    .icon-call {
+        width: 40px;
+        height: 40px;
+    }
 
-.checkout {
-    padding-top: 160px;
-    padding-bottom: 20px;
-}
+    .checkout {
+        padding-top: 160px;
+        padding-bottom: 20px;
+    }
 
-.popular-swiper-section {
-    padding: 15px 10px;
-}
+    .popular-swiper-section {
+        padding: 15px 10px;
+    }
 
-.count-section {
-    padding-block: 0;
-}
+    .count-section {
+        padding-block: 0;
+    }
 
-.bottom-content>.search,
-.bottom-content>.search>a,
-.bottom-content>.search>a>button {
-    width: 100%;
-}
+    .bottom-content>.search,
+    .bottom-content>.search>a,
+    .bottom-content>.search>a>button {
+        width: 100%;
+    }
 
-.footer-section>.container>.row>div {
-    margin-bottom: 10px;
-}
+    .footer-section>.container>.row>div {
+        margin-bottom: 10px;
+    }
 
-.subscribe {
-    gap: 10px;
-}
+    .subscribe {
+        gap: 10px;
+    }
 
-.f-link {
-    width: 50% !important;
-}
+    .f-link {
+        width: 50% !important;
+    }
 
-.footer-links {
-    gap: 10px;
-}
+    .footer-links {
+        gap: 10px;
+    }
 
-.footer-links>li a {
-    font-size: 14px;
-}
+    .footer-links>li a {
+        font-size: 14px;
+    }
 
-.footer-para {
-    font-size: 12px;
-}
+    .footer-para {
+        font-size: 12px;
+    }
 }

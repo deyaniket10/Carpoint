@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How its Work</title>
+    <title>Payment</title>
 
     <!-- Bootstrap Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,11 +25,10 @@
     <header class="header-section  ">
         <nav class="navbar navbar-expand-lg  ">
             <div class="container">
-                <a class="navbar-brand" href="./index.html"><img src="./Assets/Carpoint-blacklogo.png"
-                        class="logo-img" alt=""></a>
-                <button class="navbar-toggler ham" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="./index.html"><img src="./Assets/Carpoint-blacklogo.png" class="logo-img"
+                        alt=""></a>
+                <button class="navbar-toggler ham" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse gap-65" id="navbarSupportedContent">
@@ -59,13 +58,221 @@
                 </div>
             </div>
         </nav>
+        <!-- Offcanvas for Mobile -->
+        <div class="offcanvas offcanvas-start bg-black" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png"
+                        class="logo-img" alt=""></a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="./About.html" class="nav-link">About</a>
+                <a href="./booking.html" class="nav-link">Booking</a>
+                <a href="./how_it_works.html" class="nav-link">How It Work</a>
+                <a href="./contactus.html" class="nav-link">Contact</a>
+                <a href="./sign_in.html" class="nav-link">Login</a>
+                <a href="./sign_up.html">
+                    <button><span>Sign up</span></button>
+                </a>
+            </div>
+        </div>
     </header>
-   
+
 
     <!-- Review Section -->
     <section class="billing-section position-relative ">
-        
-      
+        <div class="container ">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="billing-container">
+                        <div class="title4">Billing Info</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="billing-subtext">Please enter your billing info</div>
+                            <div class="billing-subtext">Step 1 of 3</div>
+                        </div>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" placeholder="Phone number" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" placeholder="Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Town / City</label>
+                                    <input type="text" id="city" placeholder="Town or city" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Payment Section -->
+
+                    <div class="payment-container">
+                        <div class="title4">Payment Method</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="billing-subtext">Please enter your Payment Method</div>
+                            <div class="billing-subtext">Step 2 of 3</div>
+                        </div>
+                        <form>
+
+                            <!-- Credit/Debit Card -->
+                            <div class="payment">
+                                <div class="payment-option active" onclick="selectPayment(this)">
+                                    <div>
+                                        <input type="radio" name="payment" checked />
+                                        Credit/Debit Card/Net Banking
+                                    </div>
+                                    <div>
+                                        <img src="./Assets/Visa_Inc._logo 1.png" class="icon" />
+                                        <img src="./Assets/mc.png" class="icon" />
+                                    </div>
+                                </div>
+
+                                <div class="payment-fields" id="card-fields">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Card Number</label>
+                                            <input type="text" placeholder="Card number" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Expiration Date</label>
+                                            <input type="text" placeholder="DD/MM/YY" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Card Holder</label>
+                                            <input type="text" placeholder="Card holder" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>CVC</label>
+                                            <input type="text" placeholder="CVC" required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PayPal -->
+                            <div class="payment-option bg" onclick="selectPayment(this)">
+                                <div>
+                                    <input type="radio" name="payment" />
+                                    PayPal
+                                </div>
+                                <img src="./Assets/PayPal.png" class="icon-pay" />
+                            </div>
+
+                            <!-- Bitcoin -->
+                            <div class="payment-option bg" onclick="selectPayment(this)">
+                                <div>
+                                    <input type="radio" name="payment" />
+                                    Bitcoin
+                                </div>
+                                <img src="./Assets/Bitcoin.png" class="icon-pay" />
+                            </div>
+
+                            <!-- UPI -->
+                            <div class="payment-option bg" onclick="selectPayment(this)">
+                                <div>
+                                    <input type="radio" name="payment" />
+                                    UPI Payments
+                                </div>
+                                <img src="./Assets/upi.png" class="icon-upi" />
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="confirmation-container">
+                        <div class="title4">Payment Method</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="billing-subtext">Please enter your Payment Method</div>
+                            <div class="billing-subtext">Step 2 of 3</div>
+                        </div>
+
+                        <form>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="marketing">
+                                <label for="marketing">I agree with sending marketing and newsletter emails. No spam,
+                                    promised!</label>
+                            </div>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">I agree with our terms and conditions and privacy policy.</label>
+                            </div>
+
+                            <button type="submit" class="btn-submit">Rent Now</button>
+
+                            <div class="security-note">
+                                <figure>
+                                    <img src="./Assets/ic-security-safety.png" alt="Security">
+                                    <figcaption>All your data are safe</figcaption>
+                                </figure>
+                                <div class="security-subtext">
+                                    We are using the most advanced security to provide you the best experience ever.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="cart shadow-sm mb-4 ">
+                        <h5>Booking Summary</h5>
+                        <div class="payble">
+                            <div class="row">
+                                <div>Base Fare</div>
+                                <div>₹4800</div>
+                            </div>
+                            <div class="row">
+                                <div>Delivery Pickup</div>
+                                <div>₹500</div>
+                            </div>
+                            <div class="row">
+                                <div>Insurance & GST</div>
+                                <div> Included</div>
+                            </div>
+                            <div class="row">
+                                <div>Security Deposit (Refundable)</div>
+                                <div>₹1000</div>
+                            </div>
+                            <div class="row">
+                                <div>Offer Applied*</div>
+                                <div>₹3000</div>
+                            </div>
+                            <div class="row border-top border-secondary">
+                                <div class="fw-medium">Total Payable</div>
+                                <div class="fw-medium"> ₹22500</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-content">
+                        <div class="title4">Service Provider Details</div>
+                        <div class="row align-items-center ">
+                            <div class="dp-img">
+                                <img src="./Assets/dp-booking.png" class="img" alt="">
+                            </div>
+                            <div class="dp-info flex-grow-1 pb-lg-3">
+                                <div class="dp-name mb-2 mb-lg-3">Rahul Dutta</div>
+                                <div class="dp-tips">2,719 trips | Joined Oct 2015</div>
+                                <p>Typically responds in 4 minutes</p>
+                                <div class="star"><img src="./Assets/review.png" class="img" alt="">440+ Reviewer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- questions section -->
         <div class="contact-container position-absolute bg-white">
             <div class="title2 text-center">Questions? Get in Touch</div>
@@ -172,7 +379,26 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <script src="./JS/index.js"></script>
+    <script>
+        function selectPayment(element) {
+            const options = document.querySelectorAll('.payment-option');
+            options.forEach(opt => {
+                opt.classList.remove('active');
+                opt.querySelector('input').checked = false;
+            });
+
+            element.classList.add('active');
+            element.querySelector('input').checked = true;
+
+            const cardFields = document.getElementById('card-fields');
+            if (element.textContent.includes('Credit/Debit')) {
+                cardFields.style.display = 'block';
+            } else {
+                cardFields.style.display = 'none';
+            }
+        }
+    </script>
+
 </body>
 
 </html>

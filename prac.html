@@ -97,56 +97,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Heart Toggle</title>
-
-    <!-- FontAwesome CDN -->
-    <!-- <script src="https://kit.fontawesome.com/4f8c618662.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        .card-icon {
-            font-size: 24px;
-            cursor: pointer;
-            transition: color 0.3s ease;
+
+        /* Fancy Map Button Style */
+        .fancy-map-btn {
+            display: inline-block;
+            background-color: #0f62fe;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 12px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(15, 98, 254, 0.3);
+            transition: all 0.3s ease;
         }
 
-        .card-icon .fa-heart {
-            color: #444;
-            /* Default grey */
-        }
-
-        .card-icon.active .fa-heart {
-            color: red;
+        .fancy-map-btn:hover {
+            background-color: #0047b3;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Example Card -->
-    <div class="card-icon" onclick="toggleHeart(this)">
-        <i class="fa-regular fa-heart"></i>
-    </div>
+    <!-- Contact-map -->
+    <section class="contact-address-section py-5 bg-white" data-aos="fade-up" data-aos-delay="100"
+        data-aos-duration="800">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Contact Details -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h5 class="fw-semibold mb-3">Contact Address:</h5>
+                    <p class="mb-4">
+                        We are Amend, A great car service and repair center in your
+                        state.<br />Service provide 24/7
+                    </p>
 
-    <script>
-        function toggleHeart(element) {
-            const icon = element.querySelector('i');
+                    <div class="d-flex align-items-start mb-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email icon" width="36"
+                            class="me-3 mt-1" />
+                        <div>
+                            <strong>Email:</strong><br />
+                            info@autocarX.com
+                        </div>
+                    </div>
 
-            if (icon.classList.contains('fa-regular')) {
-                icon.classList.remove('fa-regular');
-                icon.classList.add('fa-solid');
-                element.classList.add('active');
-            } else {
-                icon.classList.remove('fa-solid');
-                icon.classList.add('fa-regular');
-                element.classList.remove('active');
-            }
-        }
-    </script>
+                    <div class="d-flex align-items-start">
+                        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="phone icon" width="36"
+                            class="me-3 mt-1" />
+                        <div>
+                            <strong>Phone</strong><br />
+                            +971 12 345 6789
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Map Image with Fancybox -->
+                <div class="col-lg-6 text-center" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
+                   
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
