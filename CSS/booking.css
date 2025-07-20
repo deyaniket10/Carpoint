@@ -271,6 +271,20 @@ button:hover::before {
     transition: 1.2s;
 }
 
+.card-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-icon .fa-heart {
+    color: #444;
+}
+
+.card-icon.active .fa-heart {
+    color: red;
+}
+
 .avl {
     min-width: 85px;
     padding: 7px 5px 7px 10px;
@@ -813,7 +827,8 @@ button:hover::before {
     .bottom-content>div {
         width: 50%;
     }
-    .icon-content{
+
+    .icon-content {
         font-size: 9px;
     }
 
@@ -821,7 +836,8 @@ button:hover::before {
         padding: 15px 10px;
         text-align: start !important;
     }
-    .form-img{
+
+    .form-img {
         width: 20px;
         margin: 0;
     }

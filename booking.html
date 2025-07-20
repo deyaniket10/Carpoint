@@ -21,7 +21,7 @@
 
 <body>
     <!-- Header-section -->
-    <section class="header-section">
+    <header class="header-section">
         <div class="container">
             <div class="header-wrapper d-flex justify-content-between align-items-center py-lg-3">
                 <div class="nav-logo">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Banner Section -->
     <section class="banner-section position-relative">
@@ -94,7 +94,7 @@
                 <div class="return">
                     <label for="time" class="sub-head">Return</label>
                     <div class="d-flex justify-content-start align-items-center">
-                    <img src="./Assets/lets-icons_date-range-light.png" class="form-img" alt="">
+                        <img src="./Assets/lets-icons_date-range-light.png" class="form-img" alt="">
                         <input type="datetime" name="time" id="return" required class="icon-content"
                             placeholder="18SEP'24,16:00 Fri">
                     </div>
@@ -330,7 +330,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Hyundai SUV</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -360,7 +362,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4">Maruti Suzuki Dzire </div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -390,7 +394,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Range Rover</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -420,7 +426,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Hyundai SUV</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -450,7 +458,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Mahindra XUV 3XO</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -480,7 +490,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Nissan Datsun GO+</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -510,7 +522,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Ford Focus </div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -540,7 +554,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">TATA Nexon</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>
@@ -570,7 +586,9 @@
                                 <div class="card-top">
                                     <div class="card-head d-flex justify-content-between">
                                         <div class="title4 ">Suzuki Ertiga</div>
-                                        <div class="card-icon"><img src="./Assets/heart.png" class="img" alt=""></div>
+                                        <div class="card-icon" onclick="toggleHeart(this)">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
                                     </div>
                                     <div class="avl"><img src="./Assets/Vector.png" alt="">Available</div>
                                 </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -86,6 +86,64 @@
             const location = document.getElementById('location').value;
             alert("Searching cars in: " + location);
             // In real project, you can redirect or send API call here.
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Toggle</title>
+
+    <!-- FontAwesome CDN -->
+    <!-- <script src="https://kit.fontawesome.com/4f8c618662.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .card-icon {
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .card-icon .fa-heart {
+            color: #444;
+            /* Default grey */
+        }
+
+        .card-icon.active .fa-heart {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Example Card -->
+    <div class="card-icon" onclick="toggleHeart(this)">
+        <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <script>
+        function toggleHeart(element) {
+            const icon = element.querySelector('i');
+
+            if (icon.classList.contains('fa-regular')) {
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid');
+                element.classList.add('active');
+            } else {
+                icon.classList.remove('fa-solid');
+                icon.classList.add('fa-regular');
+                element.classList.remove('active');
+            }
         }
     </script>
 

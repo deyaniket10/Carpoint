@@ -53,3 +53,18 @@ mobile.addEventListener("click", () => {
 //         filterModal.style.display = 'none';
 //     }
 // });
+
+// For heart Section
+function toggleHeart(element) {
+    const icon = element.querySelector('i');
+
+    if (icon.classList.contains('fa-regular')) {
+        icon.classList.remove('fa-regular');
+        icon.classList.add('fa-solid');
+        element.classList.add('active');
+    } else {
+        icon.classList.remove('fa-solid');
+        icon.classList.add('fa-regular');
+        element.classList.remove('active');
+    }
+}

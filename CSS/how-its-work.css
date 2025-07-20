@@ -112,6 +112,7 @@ ul>li {
 
 .nav-link {
     font-size: 19px;
+    text-shadow:  2px 2px 0 white;
 }
 
 .ham::before {
