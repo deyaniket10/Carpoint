@@ -13,14 +13,17 @@ menu.addEventListener("click", () => {
 })
 
 // right box of cart section
-function updatePrice(value) {
-    document.getElementById('priceOutput').innerText = '₹' + value;
+function updatePrice(input) {
+    const value = input.value;
+    const formattedValue = Number(value).toLocaleString('en-IN');
+    document.getElementById('priceOutput2').innerText = '₹' + formattedValue;
 }
+
 
 function clearAll() {
     document.querySelectorAll('.form-check-input').forEach(el => el.checked = false);
     document.getElementById('priceRange').value = 1000;
-    updatePrice(1000);
+    updatePrice(5000);
 }
 
 // for mobile 
@@ -35,24 +38,7 @@ mobile.addEventListener("click", () => {
     items.classList.toggle("active");
 })
 
-// const openBtn = document.getElementById('openFilterBtn');
-// const closeBtn = document.getElementById('closeFilterBtn');
-// const filterModal = document.getElementById('filterModal');
 
-// openBtn.addEventListener('click', () => {
-//     filterModal.style.display = 'block';
-// });
-
-// closeBtn.addEventListener('click', () => {
-//     filterModal.style.display = 'none';
-// });
-
-// // Optional: Close modal when clicking outside
-// window.addEventListener('click', (e) => {
-//     if (e.target === filterModal) {
-//         filterModal.style.display = 'none';
-//     }
-// });
 
 // For heart Section
 function toggleHeart(element) {
@@ -68,3 +54,23 @@ function toggleHeart(element) {
         element.classList.remove('active');
     }
 }
+
+// input field
+function formatDate() {
+    const input = document.getElementById('inputField');
+    const date = new Date(input.value);
+    if (isNaN(date)) return;
+
+    const days = String(date.getDate()).padStart(2, '0');
+    const months = date.toLocaleString('en-US', { month: 'short' }).toUpperCase();
+    const year = String(date.getFullYear()).slice(2);
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const weekday = date.toLocaleString('en-US', { weekday: 'short' });
+
+    // Proper backticks for template-literal
+    const finalFormat = `${days} ${months}'${year},${hours}:${minutes} ${weekday}`;
+    document.getElementById('formattedText').textContent = finalFormat;
+}
+
+document.getElementById('submitBtn').addEventListener('click', formatDate);

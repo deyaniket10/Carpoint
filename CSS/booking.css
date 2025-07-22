@@ -154,7 +154,7 @@ p,
 
 .bottom-content>div {
     width: 20%;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 
 .icon-content>img {
@@ -258,18 +258,18 @@ button:hover::before {
     box-shadow: 2px 5px 10px gray;
     border-radius: 10px;
     width: 100%;
-    height: 450px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-
+/* 
 .cart:hover {
     transform: translateY(10px);
     box-shadow: 1px 10px 10px rgb(16, 88, 204);
     transition: 1.2s;
-}
+} */
 
 .card-icon {
     font-size: 24px;
@@ -593,6 +593,7 @@ button:hover::before {
 .subscribe #email {
     padding: 11px 7px;
     border-radius: 4px;
+    background-color: #d9d9d9;
 }
 
 .subscribe a {
@@ -635,6 +636,52 @@ button:hover::before {
 }
 
 
+.date-time-box {
+    background: #fff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    max-width: 320px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.date-label {
+    font-weight: 700;
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.date-display {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.date-display img {
+    width: 18px;
+    height: 18px;
+}
+
+input[type="datetime-local"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (max-width:1200px) {
+    .icon-content {
+        font-size: 10px;
+    }
+
+    .bottom-content button {
+        font-size: 15px;
+        padding: 11px 15px;
+    }
+
+}
 
 @media screen and (max-width:992px) {
     .nav-collapse {
@@ -667,9 +714,23 @@ button:hover::before {
     }
 
     .bottom-content {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         row-gap: 10px;
         padding: 40px 15px;
+
+    }
+
+    .sub-head {
+        font-size: 16px;
+    }
+
+    .icon-content {
+        font-size: 9px;
+    }
+
+    .form-img {
+        width: 18px;
+        margin-right: 3px;
     }
 
     .bottom-content>div {
@@ -717,6 +778,7 @@ button:hover::before {
     .form-footer #footer-email {
         padding: 11px 7px;
         border-radius: 4px;
+        background-color: #d9d9d9;
     }
 
     .subscribe button {
@@ -815,6 +877,11 @@ button:hover::before {
     .fa-circle-xmark {
         font-size: 24px;
         color: var(--btn--color);
+    }
+
+    .bottom-content {
+        flex-wrap: wrap;
+        justify-content: center !important;
     }
 
 }

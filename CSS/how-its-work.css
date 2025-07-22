@@ -112,7 +112,7 @@ ul>li {
 
 .nav-link {
     font-size: 19px;
-    text-shadow:  2px 2px 0 white;
+    text-shadow: 2px 2px 0 white;
 }
 
 .ham::before {
@@ -452,7 +452,7 @@ button:hover::before {
     margin: auto;
     border-radius: 16px;
     padding: 30px 15px 20px;
-
+    z-index: 10;
     position: relative;
     overflow: hidden;
     box-shadow: -1px -3px 6px 2px gainsboro;
@@ -562,6 +562,7 @@ button:hover::before {
 .subscribe #email {
     padding: 11px 7px;
     border-radius: 4px;
+    background-color: #D9D9D9;
 }
 
 .subscribe a {
@@ -662,6 +663,7 @@ hr {
     .form-footer #footer-email {
         padding: 11px 7px;
         border-radius: 4px;
+        background-color: #D9D9D9;
     }
 
     .subscribe button {
@@ -989,5 +991,8 @@ hr {
 
     .work-section {
         padding: 40px 15px;
+    }
+    .cart-row{
+        justify-content: center;
     }
 }

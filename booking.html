@@ -69,40 +69,26 @@
                 <div class="location">
                     <label for="location" class="sub-head">Location</label>
                     <div class="d-flex justify-content-start align-items-center">
-                        <img src="./Assets/mdi_locations.png" class="form-img" alt=""><input type="text" name="location"
-                            id="loc" class="icon-content" required placeholder="Deshapriya Park, Kolkata">
-
-                    </div> <!-- <div class="sub-head">Location</div> -->
-                    <!-- <div class="icon-content">
-                        <img src="./Assets/mdi_locations.png" alt="">
-                        <span></span>
-                    </div> -->
+                        <img src="./Assets/mdi_locations.png" class="form-img" alt="">
+                        <input type="text" name="location" id="loc" class="icon-content" required
+                            placeholder="Deshapriya Park, Kolkata">
+                    </div>
                 </div>
                 <div class="pick-up">
                     <label for="time" class="sub-head">Pick -Up Date</label>
-                    <div class="d-flex justify-content-start align-items-center">
-                        <img src="./Assets/lets-icons_date-range-light.png" class="form-img" alt="">
-                        <input type="datetime" name="time" id="time" class="icon-content" required
-                            placeholder="14 SEP'24,15:00 Mon">
+                    <div class="date-display" onclick="document.getElementById('dateInput').showPicker()">
+                        <img src="./Assets/lets-icons_date-range-light.png" alt="calendar">
+                        <span id="formattedText" class="icon-content">14 SEP'24,15:00 Mon</span>
+                        <input type="datetime-local" id="dateInput" onchange="formatDate(this)">
                     </div>
-                    <!-- <div class="sub-head">Pick -Up Date</div>
-                    <div class="icon-content">
-                        <img src="./Assets/lets-icons_date-range-light.png" alt="">
-                        <span>14 SEP'24,15:00 Mon</span>
-                    </div> -->
                 </div>
                 <div class="return">
                     <label for="time" class="sub-head">Return</label>
-                    <div class="d-flex justify-content-start align-items-center">
-                        <img src="./Assets/lets-icons_date-range-light.png" class="form-img" alt="">
-                        <input type="datetime" name="time" id="return" required class="icon-content"
-                            placeholder="18SEP'24,16:00 Fri">
+                    <div class="date-display" onclick="document.getElementById('dateInput').showPicker()">
+                        <img src="./Assets/lets-icons_date-range-light.png" alt="calendar">
+                        <span id="formattedText" class="icon-content">18SEP'24,16:00 Fri</span>
+                        <input type="datetime-local" id="dateInput" onchange="formatDate(this)">
                     </div>
-                    <!-- <div class="sub-head">Retrun</div>
-                    <div class="icon-content">
-                        <img src="./Assets/lets-icons_date-range-light.png" alt="">
-                        <span>18SEP'24,16:00 Fri</span>
-                    </div> -->
                 </div>
                 <div class="car-brand">
                     <label for="any" class="sub-head">Any</label>
@@ -110,12 +96,6 @@
                         <img src="./Assets/ph_car-fill.png" class="form-img" alt="">
                         <input type="datetime" name="any" id="any" class="icon-content" required placeholder="Any">
                     </div>
-
-                    <!-- <div class="sub-head">Car Brand</div>
-                    <div class="icon-content">
-                        <img src="./Assets/ph_car-fill.png" alt="">
-                        <span>Any</span>
-                    </div> -->
                 </div>
                 <div class="search">
                     <a href="#">
@@ -308,9 +288,9 @@
                         <hr>
                         <!-- Price -->
                         <div class="section-title">Price</div>
-                        <input type="range" class="form-range" min="1000" max="10000" id="priceRange"
-                            oninput="updatePrice(this.value)">
-                        <div class="range-output" id="priceOutput">₹1000</div>
+                        <input type="range" class="form-range" min="1000" max="10000" id="priceRange2"
+                            oninput="updatePrice(this)">
+                        <div class="range-output" id="priceOutput2">₹5000</div>
                     </div>
                 </div>
 

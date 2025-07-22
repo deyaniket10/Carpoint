@@ -230,7 +230,6 @@ button:hover::before {
 
 .banner-btn {
   width: 422px;
-  text-align: center;
 }
 
 .banner-btn>a {
@@ -279,6 +278,70 @@ button:hover::before {
   font-weight: 400;
 }
 
+.icon-content {
+  color: #8d8d8d;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+}
+
+.sub-head {
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  text-align: start;
+}
+
+.form-img {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.mobile,
+.mobile-items {
+  display: none;
+}
+
+
+.date-time-box {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  max-width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.date-label {
+  font-weight: 700;
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.date-display {
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.date-display img {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="datetime-local"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
 /* Checkout Section */
 .checkout {
   padding-block: 130px 65px;
@@ -292,12 +355,9 @@ button:hover::before {
   position: relative;
 }
 
-.checkout-swiper .swiper-wrapper {
-  justify-content: space-between;
-  gap: 80px;
-}
 
-.swiper-slide.card {
+
+.swiper-slide .card {
   max-width: 323px !important;
   background: var(--cart--color);
   border-radius: 8px;
@@ -305,6 +365,7 @@ button:hover::before {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .card-img {
@@ -353,14 +414,14 @@ button:hover::before {
   background: url(../Assets/arrow-right.png) no-repeat center/contain;
   height: 45px !important;
   width: 47px !important;
-  right: -23px !important;
+  right: -5px !important;
 }
 
 .checkout-swiper .swiper-button-prev {
   background: url(../Assets/aroow-left.png) no-repeat center/contain;
   height: 45px !important;
   width: 47px !important;
-  left: -25px !important;
+  left: -5px !important;
 }
 
 .swiper-button-next:after,
@@ -760,6 +821,7 @@ button:hover::before {
 .subscribe #email {
   padding: 11px 7px;
   border-radius: 4px;
+  background-color: #D9D9D9;
 }
 
 .subscribe a {
@@ -798,6 +860,16 @@ hr {
   .checkout-swiper .swiper-wrapper {
     gap: 0;
   }
+
+  .icon-content {
+    font-size: 10px;
+  }
+
+  .bottom-content button {
+    font-size: 15px;
+    padding: 11px 15px;
+  }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -826,8 +898,21 @@ hr {
   }
 
   .bottom-content {
-    flex-wrap: wrap;
+    padding: 40px 15px;
     row-gap: 10px;
+  }
+
+  .sub-head {
+    font-size: 16px;
+  }
+
+  .icon-content {
+    font-size: 9px;
+  }
+
+  .form-img {
+    width: 18px;
+    margin-right: 3px;
   }
 
   .bottom-content>div {
@@ -857,6 +942,7 @@ hr {
   .form-footer #footer-email {
     padding: 11px 7px;
     border-radius: 4px;
+    background-color: #D9D9D9;
   }
 
   .subscribe button {
@@ -909,6 +995,8 @@ hr {
 
   .bottom-content {
     bottom: -120px;
+    flex-wrap: wrap;
+    justify-content: center !important;
   }
 
   .banner-section {
@@ -917,6 +1005,19 @@ hr {
 
   .bottom-content>div {
     width: 33.33%;
+    padding-left: 0;
+  }
+
+  .icon-content {
+    font-size: 12px;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  .icon-content span {
+    font-size: 13px;
   }
 
   .right-content {
