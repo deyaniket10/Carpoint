@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rentals</title>
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Font Awsome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Font Link */
+        /* Font Link */
+        @import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Syne:wght@400..800&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            font-family: "poppins", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --btn--color: #ffae00;
+            --font--color: #b0b0b0;
+            --cart--color: #f3f6f8;
+            --bg--color: #f8f8f8;
+            --para-color: #8d8d8d;
+        }
+
+        .container {
+            max-width: 1310px;
+            padding: 0 15px;
+        }
+
+        h1,
+        .title1 {
+            font-size: 48px;
+            font-weight: 600;
+            color: white;
+        }
+
+        h2,
+        .title2 {
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        h3,
+        .title3 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        h4,
+        .title4 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        h5,
+        .sub-head {
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+        }
+
+        p,
+        .sub-para {
+            font-size: 19px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        p,
+        .para {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--para-color);
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        ul>li {
+            list-style-type: none;
+        }
+
+        .mx-vh-100 {
+            min-height: 800px;
+        }
+
+        .img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        /* Header Section */
+        .header-section {
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .logo-img {
+            height: fit-content;
+            width: 216px;
+            object-fit: contain;
+        }
+
+        .gap-65 {
+            flex-grow: 0;
+            flex-basis: auto;
+            gap: 20px;
+        }
+
+        .nav-link {
+            font-size: 19px;
+            font-weight: 500;
+            padding-right: 0 !important;
+            text-shadow: 2px 2px 0 white;
+        }
+
+        .ham::before {
+            background: none !important;
+        }
+
+        button {
+            outline: none;
+            cursor: pointer;
+            border: none;
+            padding: 0.9rem 2rem;
+            margin: 0;
+            /* font-family: inherit; */
+            /* font-size: inherit; */
+            position: relative;
+            display: inline-block;
+            letter-spacing: 0.05rem;
+            font-weight: 700;
+            font-size: 19px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: black;
+            color: rgb(255, 255, 255);
+        }
+
+        button span {
+            position: relative;
+            z-index: 10;
+            transition: color 0.4s;
+        }
+
+        button::before,
+        button::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        button::before {
+            content: "";
+            background: var(--btn--color);
+            width: 120%;
+            left: -10%;
+            transform: skew(15deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        }
+
+        button:hover::before {
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .nav-link:hover {
+            color: var(--btn--color) !important;
+            content: " ";
+            border-bottom: 1px solid var(--btn--color);
+        }
+
+        /* Offcanvas */
+        .offcanvas {
+            display: none;
+        }
+
+        .offcanvas-body a {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #000;
+            text-decoration: none;
+            display: block;
+        }
+
+        .offcanvas-body a:hover {
+            /* color: #ffae00; */
+        }
+
+        .offcanvas-body button {
+            width: 100%;
+        }
+
+        .offcanvas-header button::before {
+            display: none;
+        }
+
+        .offcanvas-header button {
+            background: url(../Assets/x-white.jpg)no-repeat center/contain;
+            height: 25px;
+            width: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header-section position-absolute top-0 ">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png"
+                        class="logo-img" alt=""></a>
+                <button class="navbar-toggler ham" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse gap-65" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3 ">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="./About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="./booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="./how_it_works.html">How its Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="./contactus.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav-btn d-flex justify-content-center align-items-center gap-lg-3">
+                        <a href="./sign_in.html" class="nav-link text-black">Login</a>
+                        <a href="./sign_up.html">
+                            <button> <span>Sign Up </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Offcanvas for Mobile -->
+        <div class="offcanvas offcanvas-start bg-black" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <a class="navbar-brand" href="./index.html"><img src="./Assets/CarPoint-White-Logo-1.png"
+                        class="logo-img" alt=""></a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="./About.html" class="nav-link">About</a>
+                <a href="./booking.html" class="nav-link">Booking</a>
+                <a href="./how_it_works.html" class="nav-link">How It Work</a>
+                <a href="./contactus.html" class="nav-link">Contact</a>
+                <a href="./sign_in.html" class="nav-link">Login</a>
+                <a href="./sign_up.html">
+                    <button><span>Sign up</span></button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Bootsrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

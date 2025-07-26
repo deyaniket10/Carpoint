@@ -657,12 +657,12 @@ button:hover::before {
     gap: 5px;
     font-size: 14px;
     color: #666;
-    cursor: pointer;
+    cursor: pointer;align-items: center;
 }
 
 .date-display img {
     width: 18px;
-    height: 18px;
+    height: 22px;
 }
 
 input[type="datetime-local"] {
@@ -988,6 +988,9 @@ input[type="datetime-local"] {
     .yellow-btn,
     .bf {
         min-width: 120px;
+    }
+    .badges{
+        margin: auto;
     }
 
 

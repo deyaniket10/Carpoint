@@ -59,11 +59,37 @@ ul {
 .gap-65 {
     flex-grow: 0;
     flex-basis: auto;
-    gap: 30px;
+    gap: 80px;
+}
+
+.nav-dp,
+.nav-dp>a {
+    height: 44px;
+    width: 44px;
+
+}
+
+.nav-dp {
+    left: -22px;
 }
 
 .nav-link {
     font-size: 19px;
+}
+
+.notification {
+    top: -22px;
+    left: 26px;
+    border-radius: 50%;
+    border: 1px solid #596780;
+    height: 44px;
+    width: 44px;
+}
+
+.img-icon {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
 }
 
 .ham::before {
@@ -76,8 +102,6 @@ button {
     border: none;
     padding: 0.9rem 2rem;
     margin: 0;
-    /* font-family: inherit; */
-    /* font-size: inherit; */
     position: relative;
     display: inline-block;
     letter-spacing: 0.05rem;
@@ -552,9 +576,24 @@ hr {
         flex-grow: 1;
         flex-basis: 100%;
         text-align: center;
-        gap: 20px;
+        gap: 30px;
         -webkit-backdrop-filter: blur(50px);
         backdrop-filter: blur(50px);
+        position: absolute;
+        top: 80px;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        padding-block: 10px;
+    }
+
+    .nav-dp {
+        margin: 0 auto 10px;
+        left: 0;
+    }
+
+    .navbar-nav {
+        margin-bottom: 30px !important;
     }
 
     .nav-link {
@@ -565,6 +604,10 @@ hr {
         flex-direction: column;
         gap: 25px;
         margin-block: 20px;
+    }
+
+    #payBtn {
+        font-size: 25px;
     }
 
     .contact-container {
@@ -768,6 +811,10 @@ hr {
         width: 50%;
     }
 
+    .right {
+        margin: auto;
+    }
+
     .gap-5 {
         gap: 30px !important;
     }
@@ -822,5 +869,9 @@ hr {
 
     .footer-para {
         font-size: 12px;
+    }
+
+    #payBtn{
+        width: 100% !important;
     }
 }

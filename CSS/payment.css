@@ -106,7 +106,7 @@ ul>li {
 .gap-65 {
     flex-grow: 0;
     flex-basis: auto;
-    gap: 30px;
+    gap: 90px;
 }
 
 .nav-link {
@@ -115,6 +115,36 @@ ul>li {
 
 .ham::before {
     background: none !important;
+}
+
+.nav-dp,
+.nav-dp>a {
+    height: 44px;
+    width: 44px;
+
+}
+
+.nav-dp {
+    left: -22px;
+}
+
+.nav-link {
+    font-size: 19px;
+}
+
+.notification {
+    top: -22px;
+    left: 26px;
+    border-radius: 50%;
+    border: 1px solid #596780;
+    height: 44px;
+    width: 44px;
+}
+
+.img-icon {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
 }
 
 button {
@@ -611,24 +641,33 @@ img.icon-pay {
     height: 80px;
     max-width: 80px;
     border-radius: 50%;
-}.dp-tips {
+}
+
+.dp-tips {
     color: #919191;
     font-size: 14px;
     font-weight: 400;
-}.dp-info p {
+}
+
+.dp-info p {
     color: #6fb64d;
     font-size: 10px;
     margin-block: 10px 7px;
-}.star {
+}
+
+.star {
     color: #596780;
     font-size: 14px;
     font-weight: 500;
-}.star img {
+}
+
+.star img {
     max-width: 108px;
     height: 20px;
     object-fit: contain;
 }
-.dp-content .title4{
+
+.dp-content .title4 {
     margin-bottom: 50px;
 }
 
@@ -641,10 +680,20 @@ img.icon-pay {
         gap: 20px;
         -webkit-backdrop-filter: blur(50px);
         backdrop-filter: blur(50px);
+        position: absolute;
+        top: 80px;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        padding: 15px 0;
+    }
+    .navbar-nav{
+        margin-bottom: 20px !important;
     }
 
-    .nav-link {
-        color: white !important;
+    .nav-dp {
+        margin: auto;
+        left: 0;
     }
 
     .offcanvas {
@@ -777,10 +826,12 @@ img.icon-pay {
         font-size: 20px;
         margin-top: 10px;
     }
-.dp-content .title4{
+
+    .dp-content .title4 {
         margin-bottom: 10px;
 
-}
+    }
+
     .form-row {
         flex-direction: column;
     }
@@ -856,7 +907,8 @@ img.icon-pay {
     img.icon-upi {
         max-width: 160px !important;
     }
-.cart{
-    margin-block: 25px;
-}
+
+    .cart {
+        margin-block: 25px;
+    }
 }

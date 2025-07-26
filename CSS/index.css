@@ -122,14 +122,12 @@ ul>li {
   background: none !important;
 }
 
-button {
+.button {
   outline: none;
   cursor: pointer;
   border: none;
   padding: 0.9rem 2rem;
   margin: 0;
-  /* font-family: inherit; */
-  /* font-size: inherit; */
   position: relative;
   display: inline-block;
   letter-spacing: 0.05rem;
@@ -141,14 +139,14 @@ button {
   color: rgb(255, 255, 255);
 }
 
-button span {
+.button span {
   position: relative;
   z-index: 10;
   transition: color 0.4s;
 }
 
-button::before,
-button::after {
+.button::before,
+.button::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -157,7 +155,7 @@ button::after {
   z-index: 0;
 }
 
-button::before {
+.button::before {
   content: "";
   background: var(--btn--color);
   width: 120%;
@@ -166,7 +164,7 @@ button::before {
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
-button:hover::before {
+.button:hover::before {
   transform: translate3d(100%, 0, 0);
 }
 
@@ -280,7 +278,7 @@ button:hover::before {
 
 .icon-content {
   color: #8d8d8d;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   border: none;
   background-color: transparent;
@@ -328,11 +326,12 @@ button:hover::before {
   font-size: 14px;
   color: #666;
   cursor: pointer;
+  align-items: center;
 }
 
 .date-display img {
   width: 18px;
-  height: 18px;
+  height: 22px;
 }
 
 input[type="datetime-local"] {
@@ -346,6 +345,53 @@ input[type="datetime-local"] {
 .checkout {
   padding-block: 130px 65px;
 }
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 19px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: black;
+  color: rgb(255, 255, 255);
+}
+
+button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+button::before,
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+button::before {
+  content: "";
+  background: var(--btn--color);
+  width: 120%;
+  left: -10%;
+  transform: skew(15deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
 
 .checkout-swiper {
   width: 100%;
@@ -538,21 +584,6 @@ input[type="datetime-local"] {
   opacity: 1;
 }
 
-/* .popular-swiper .swiper-wrapper {
-  align-items: center;
-}
-
-/* Root swiper container should also prevent overflow */
-/* .popular-swiper-section,
-.popular-swiper {
-  overflow-x: hidden;
-} */
-
-/* If any inner container is causing overflow on X, restrict it */
-/* .popular-swiper-section>.swiper-container {
-  overflow-x: hidden;
-} */
-*/
 
 /* Choose-cection */
 .choose-section .para {
@@ -873,14 +904,6 @@ hr {
 }
 
 @media screen and (max-width: 992px) {
-  .gap-65 {
-    flex-grow: 1;
-    flex-basis: 100%;
-    text-align: center;
-    gap: 20px;
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(50px);
-  }
 
   .offcanvas {
     display: block;
@@ -1131,6 +1154,10 @@ hr {
     padding-bottom: 80px;
   }
 
+  .button {
+    text-align: center;
+  }
+
   .banner-btn,
   .banner-btn>a,
   .banner-btn>a>button {
@@ -1172,6 +1199,10 @@ hr {
     display: block !important;
   }
 
+  .icon-content {
+    font-size: 7px;
+  }
+
   .icon-content span {
     font-size: 12px;
   }
@@ -1205,6 +1236,10 @@ hr {
   .icon-call {
     width: 40px;
     height: 40px;
+  }
+
+  .caraousel-track {
+    animation: scroll 7s linear infinite;
   }
 
   /* Cart-testimonial */
